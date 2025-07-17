@@ -1,4 +1,5 @@
 import React from 'react';
+import './HomePage.css';
 import heroImage from '../../assets/hero.png'; 
 
 const HomePage = () => {

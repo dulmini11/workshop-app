@@ -9,7 +9,7 @@ A modern, single-page workshop management web application built with React and V
 - Submit and view feedback
 - My Dashboard (registrations + feedback)
 
-## 🛠 Tech Stack
+## Tech Stack
 -  React.js (with Vite)
 -  Tailwind CSS
 -  React Router

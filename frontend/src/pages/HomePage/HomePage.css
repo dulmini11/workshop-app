@@ -555,25 +555,27 @@
   }
 }
 
-/* FilterControls.css - Refined Layout */
+/* FilterControls.css - Single Row Layout */
 .filter-controls {
   background: rgba(0, 0, 0, 0.9);
   border-radius: 16px;
   padding: 20px;
-  max-width: 800px;
+  max-width: 1300px;
   margin: 30px auto;
   box-shadow: 0 8px 32px rgba(24, 11, 97, 0.15);
   border: 2px solid rgba(76, 72, 209, 0.1);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .filter-group {
   display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .search-group input {
@@ -581,8 +583,7 @@
   border-radius: 20px;
   border: 2px solid rgba(76, 72, 209, 0.2);
   font-size: 14px;
-  width: 100%;
-  max-width: 400px;
+  width: 550px;
   background: white;
   color: #333;
   transition: all 0.3s ease;
@@ -597,9 +598,9 @@
 .select-group select {
   padding: 10px 16px;
   border-radius: 20px;
-  border: 2px solid rgba(76, 72, 209, 0.2);
-  background:#4c48d1;
-  color: rgb(255, 255, 255);
+  border: 2px solid #4c48d1;
+  background: #000000;
+  color: #4b2edd;
   font-size: 14px;
   min-width: 150px;
   cursor: pointer;
@@ -607,12 +608,18 @@
 
 .select-group select[multiple] {
   min-height: 80px;
+  width: 180px;
 }
 
 .select-group select:focus {
   outline: none;
-  border-color: #4c48d1;
+  border-color: #4d48d162;
   box-shadow: 0 0 0 3px rgba(76, 72, 209, 0.1);
+}
+
+.button-group {
+  display: flex;
+  gap: 8px;
 }
 
 .button-group button {
@@ -649,7 +656,167 @@
   box-shadow: 0 4px 12px rgba(77, 72, 209, 0.003);
 }
 
-/* Mobile responsiveness */
+/* Media Queries for Tablet */
+@media (max-width: 1024px) {
+  .filter-controls {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .search-group input {
+    width: 250px;
+  }
+
+  .select-group select {
+    min-width: 130px;
+  }
+
+  .select-group select[multiple] {
+    width: 150px;
+  }
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  .filter-controls {
+    flex-direction: column;
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .filter-group {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .search-group input,
+  .select-group select {
+    width: 100%;
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .button-group {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .button-group button {
+    flex: 1;
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+
+/* Media Queries for Small Mobile */
+@media (max-width: 480px) {
+  .filter-controls {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .search-group input,
+  .select-group select,
+  .button-group button {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .select-group select[multiple] {
+    min-height: 70px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .button-group button {
+    flex: none;
+  }
+}
+
+/* Media Queries for Tablet */
+@media (max-width: 1024px) {
+  .filter-controls {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .search-group input {
+    width: 200px;
+  }
+
+  .select-group select {
+    min-width: 130px;
+  }
+
+  .select-group select[multiple] {
+    width: 150px;
+  }
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  .filter-controls {
+    flex-direction: column;
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .filter-group {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .search-group input,
+  .select-group select {
+    width: 100%;
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .button-group {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .button-group button {
+    flex: 1;
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+
+/* Media Queries for Small Mobile */
+@media (max-width: 480px) {
+  .filter-controls {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .search-group input,
+  .select-group select,
+  .button-group button {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .select-group select[multiple] {
+    min-height: 70px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .button-group button {
+    flex: none;
+  }
+}
+
+/* Media Queries for Tablet */
 @media (max-width: 768px) {
   .filter-controls {
     padding: 16px;
@@ -670,26 +837,3 @@
   }
 }
 
-@media (max-width: 480px) {
-  .filter-controls {
-    padding: 12px;
-    gap: 12px;
-  }
-
-  .search-group input,
-  .select-group select,
-  .button-group button {
-    font-size: 12px;
-    padding: 8px 10px;
-  }
-
-  .select-group select[multiple] {
-    min-height: 70px;
-  }
-
-  .button-group {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-}

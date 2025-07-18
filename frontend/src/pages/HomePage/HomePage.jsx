@@ -44,17 +44,21 @@ const HomePage = () => {
   const toggleSort = () => setIsSorted(!isSorted);
 
   const filteredWorkshops = workshops
-    .filter((workshop) =>
-      workshop.title.toLowerCase().includes(searchTerm.toLowerCase())
-    )
-    .filter((workshop) =>
-      selectedCategory ? workshop.category === selectedCategory : true
-    )
-    .filter((workshop) =>
-      selectedTags.length > 0
-        ? selectedTags.every(tag => workshop.tags.includes(tag))
-        : true
-    );
+  .filter((workshop) => {
+    const search = searchTerm.toLowerCase();
+    const matchesTitle = workshop.title.toLowerCase().includes(search);
+    const matchesTags = workshop.tags.some(tag => tag.toLowerCase().includes(search));
+    const matchesCategory = workshop.category.toLowerCase().includes(search);
+    return matchesTitle || matchesTags || matchesCategory;
+  })
+  .filter((workshop) =>
+    selectedCategory ? workshop.category === selectedCategory : true
+  )
+  .filter((workshop) =>
+    selectedTags.length > 0
+      ? selectedTags.every(tag => workshop.tags.includes(tag))
+      : true
+  );
 
   const displayedWorkshops = isSorted
     ? [...filteredWorkshops].sort((a, b) => new Date(a.date) - new Date(b.date))
@@ -105,13 +109,13 @@ const HomePage = () => {
       {/* Filter Controls container holding all filtering UI elements */}
       <div className="filter-controls">
 
-        {/* Search input for filtering workshops by name or keyword */}
+        {/* Search input for filtering workshops by title or tags */}
         <div className="filter-group search-group">
           <input
             type="text"
-            placeholder="Search workshops"
+            placeholder="Search workshops (by title or tag)"
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)} // Updates the search term state on user input
+            onChange={(e) => setSearchTerm(e.target.value)} // Updates the search term state
           />
         </div>
 
@@ -131,30 +135,31 @@ const HomePage = () => {
         {/* Buttons to sort by date or clear all filters */}
         <div className="filter-group button-group">
           <button className="btn-secondary" onClick={toggleSort}>
-            {isSorted ? 'Unsort' : 'Sort by Date'}
-            {/* Toggles sorting state */}
+            {isSorted ? 'Unsort' : 'Sort by Date'} {/* Toggles sorting state */}
           </button>
           <button className="btn-secondary clear-filters" onClick={clearFilters}>
-            Clear Filters
-            {/* Resets all filters to default */}
+            Clear Filters {/* Resets all filters to default */}
           </button>
         </div>
 
         {/* Multi-select dropdown to filter workshops by tags */}
-        <select
-          multiple
-          value={selectedTags}
-          onChange={(e) => {
-            const selected = Array.from(e.target.selectedOptions, option => option.value);
-            setSelectedTags(selected); // Updates selected tags array
-          }}
-        >
-          {workshopsData.tags.map((tag) => (
-            <option key={tag} value={tag}>{tag}</option> // Dynamically renders tag options
-          ))}
-        </select>
+        {/* <div className="filter-group select-group">
+          <select
+            multiple
+            value={selectedTags}
+            onChange={(e) => {
+              const selected = Array.from(e.target.selectedOptions, option => option.value);
+              setSelectedTags(selected); // Updates selected tags array
+            }}
+          >
+            {workshopsData.tags.map((tag) => (
+              <option key={tag} value={tag}>{tag}</option> // Dynamically renders tag options
+            ))}
+          </select>
+        </div> */}
 
       </div>
+
 
       {/* Workshop Grid */}
       <div className="workshop-grid-section">

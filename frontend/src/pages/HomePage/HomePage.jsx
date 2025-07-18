@@ -81,6 +81,7 @@ const HomePage = () => {
               <img src={workshop.image} alt={workshop.title} className="workshop-image" />
               <h3 className="workshop-title">{workshop.title}</h3>
               <p className="workshop-date">{workshop.date}</p>
+              <button className="view-more-button">View More →</button>
             </div>
           ))}
         </div>

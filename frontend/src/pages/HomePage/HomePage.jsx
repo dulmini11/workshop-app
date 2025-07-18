@@ -131,10 +131,12 @@ const HomePage = () => {
         {/* Buttons to sort by date or clear all filters */}
         <div className="filter-group button-group">
           <button className="btn-secondary" onClick={toggleSort}>
-            {isSorted ? 'Unsort' : 'Sort by Date'} // Toggles sorting state
+            {isSorted ? 'Unsort' : 'Sort by Date'}
+            {/* Toggles sorting state */}
           </button>
           <button className="btn-secondary clear-filters" onClick={clearFilters}>
-            Clear Filters // Resets all filters to default
+            Clear Filters
+            {/* Resets all filters to default */}
           </button>
         </div>
 

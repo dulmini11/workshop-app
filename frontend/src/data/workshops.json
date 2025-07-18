@@ -1,110 +1,136 @@
-[
-  {
-    "id": 1,
-    "title": "Web Development Bootcamp",
-    "category": "Technology",
-    "tags": ["coding", "frontend", "html", "css", "javascript"],
-    "date": "2025-08-10",
-    "description": "Learn full-stack web development from scratch using HTML, CSS, JavaScript, and React.",
-     "image": "/workS1.jpeg"
-  },
-  {
-    "id": 2,
-    "title": "Explore Space Science Workshop",
-    "category": "Science",
-    "tags": ["space", "nasa", "astronomy", "rockets"],
-    "date": "2025-08-15",
-    "description": "Dive into the wonders of space, planets, and stars. Ideal for young explorers!",
-     "image": "/workS2.jpeg"
-  },
-  {
-    "id": 3,
-    "title": "Creative Art & Painting Workshop",
-    "category": "Art",
-    "tags": ["drawing", "painting", "colors", "creativity"],
-    "date": "2025-08-12",
-    "description": "Unleash your creativity with brushes, colors, and a canvas. Open to all skill levels.",
-     "image": "/workS3.jpeg"
-  },
+{
+  "categories": [
+    "Technology",
+    "Science",
+    "Art",
+    "Environment",
+    "Business",
+    "Health & Wellness",
+    "Education",
+    "Personal Development"
+  ],
+  "tags": [
+    "coding", "frontend", "html", "css", "javascript",
+    "space", "nasa", "astronomy", "rockets",
+    "drawing", "painting", "colors", "creativity",
+    "gardening", "eco-friendly", "hands-on", "plants",
+    "entrepreneurship", "career", "skills", "business",
+    "yoga", "exercise", "stretch", "balance",
+    "robotics", "engineering", "kids", "stem",
+    "students", "mental-health", "stress", "support",
+    "camera", "dslr", "photography",
+    "react", "web development",
+    "learning", "fun", "activities",
+    "communication", "confidence", "teens"
+  ],
+  "workshops": [
     {
-    "id": 4,
-    "title": "Sustainable Planting Workshop",
-    "category": "Environment",
-    "tags": ["gardening", "eco-friendly", "hands-on", "plants"],
-    "date": "2025-08-15",
-    "description": "A hands-on workshop focused on sustainable planting techniques, composting, and eco-friendly gardening practices for all age groups.",
-    "image": "/workS4.jpeg"
+      "id": 1,
+      "title": "Web Development Bootcamp",
+      "category": "Technology",
+      "tags": ["coding", "frontend", "html", "css", "javascript"],
+      "date": "2025-08-10",
+      "description": "Learn full-stack web development from scratch using HTML, CSS, JavaScript, and React.",
+      "image": "/workS1.jpeg"
     },
-  {
-    "id": 5,
-    "title": "Self-Employment Skills Workshop",
-    "category": "Business",
-    "tags": ["entrepreneurship", "career", "skills", "business"],
-    "date": "2025-08-17",
-    "description": "Gain insights into freelancing, small business setup, and sustainable self-employment tips.",
-    "image": "/workS5.jpeg"
-  },
-  {
-    "id": 6,
-    "title": "Yoga for Adults",
-    "category": "Health & Wellness",
-    "tags": ["yoga", "exercise", "stretch", "balance"],
-    "date": "2025-08-09",
-    "description": "Relax your body and mind through guided yoga practices suitable for beginners and adults.",
-    "image": "/workS6.jpeg"
-  },
-  {
-    "id": 7,
-    "title": "Robotics for Beginners",
-    "category": "Technology",
-    "tags": ["robotics", "engineering", "kids", "stem"],
-    "date": "2025-08-16",
-    "description": "Hands-on workshop to introduce basic robotics concepts and simple robot building.",
-    "image": "/workS7.jpeg"
-  },
-  {
-    "id": 8,
-    "title": "Mental Health Support for A/L Students",
-    "category": "Education",
-    "tags": ["students", "mental-health", "stress", "support"],
-    "date": "2025-08-11",
-    "description": "Focused on managing stress and exam pressure, this session is tailored for A/L students.",
-     "image": "/workS8.jpeg"
-  },
-  {
-    "id": 9,
-    "title": "Photography Basics Workshop",
-    "category": "Art",
-    "tags": ["camera", "dslr", "creativity", "photography"],
-    "date": "2025-08-13",
-    "description": "Capture moments like a pro! Learn the fundamentals of photography and composition.",
-    "image": "/workS9.jpeg"
-  },
-  {
-    "id": 10,
-    "title": "React JS Development Workshop",
-    "category": "Technology",
-    "tags": ["react", "javascript", "frontend", "web development"],
-    "date": "2025-08-14",
-    "description": "Master the fundamentals of React.js by building interactive user interfaces and learning key concepts like components, hooks, and state management.",
-    "image": "/workS10.jpeg"
-  },
     {
-    "id": 11,
-    "title": "Children's Learning Workshop",
-    "category": "Education",
-    "tags": ["kids", "learning", "fun", "activities"],
-    "date": "2025-08-08",
-    "description": "Interactive activities designed to boost creativity and cognitive skills in children aged 5-10.",
-    "image": "/workS11.jpeg"
-  },
-  {
-    "id": 12,
-    "title": "Public Speaking for Teens",
-    "category": "Personal Development",
-    "tags": ["communication", "confidence", "teens", "skills"],
-    "date": "2025-08-19",
-    "description": "Build your public speaking and presentation skills in a supportive group setting.",
-     "image": "/workS12.jpeg"
-  }
-]
+      "id": 2,
+      "title": "Explore Space Science Workshop",
+      "category": "Science",
+      "tags": ["space", "nasa", "astronomy", "rockets"],
+      "date": "2025-08-15",
+      "description": "Dive into the wonders of space, planets, and stars. Ideal for young explorers!",
+      "image": "/workS2.jpeg"
+    },
+    {
+      "id": 3,
+      "title": "Creative Art & Painting Workshop",
+      "category": "Art",
+      "tags": ["drawing", "painting", "colors", "creativity"],
+      "date": "2025-08-12",
+      "description": "Unleash your creativity with brushes, colors, and a canvas. Open to all skill levels.",
+      "image": "/workS3.jpeg"
+    },
+    {
+      "id": 4,
+      "title": "Sustainable Planting Workshop",
+      "category": "Environment",
+      "tags": ["gardening", "eco-friendly", "hands-on", "plants"],
+      "date": "2025-08-15",
+      "description": "A hands-on workshop focused on sustainable planting techniques, composting, and eco-friendly gardening practices for all age groups.",
+      "image": "/workS4.jpeg"
+    },
+    {
+      "id": 5,
+      "title": "Self-Employment Skills Workshop",
+      "category": "Business",
+      "tags": ["entrepreneurship", "career", "skills", "business"],
+      "date": "2025-08-17",
+      "description": "Gain insights into freelancing, small business setup, and sustainable self-employment tips.",
+      "image": "/workS5.jpeg"
+    },
+    {
+      "id": 6,
+      "title": "Yoga for Adults",
+      "category": "Health & Wellness",
+      "tags": ["yoga", "exercise", "stretch", "balance"],
+      "date": "2025-08-09",
+      "description": "Relax your body and mind through guided yoga practices suitable for beginners and adults.",
+      "image": "/workS6.jpeg"
+    },
+    {
+      "id": 7,
+      "title": "Robotics for Beginners",
+      "category": "Technology",
+      "tags": ["robotics", "engineering", "kids", "stem"],
+      "date": "2025-08-16",
+      "description": "Hands-on workshop to introduce basic robotics concepts and simple robot building.",
+      "image": "/workS7.jpeg"
+    },
+    {
+      "id": 8,
+      "title": "Mental Health Support for A/L Students",
+      "category": "Education",
+      "tags": ["students", "mental-health", "stress", "support"],
+      "date": "2025-08-11",
+      "description": "Focused on managing stress and exam pressure, this session is tailored for A/L students.",
+      "image": "/workS8.jpeg"
+    },
+    {
+      "id": 9,
+      "title": "Photography Basics Workshop",
+      "category": "Art",
+      "tags": ["camera", "dslr", "creativity", "photography"],
+      "date": "2025-08-13",
+      "description": "Capture moments like a pro! Learn the fundamentals of photography and composition.",
+      "image": "/workS9.jpeg"
+    },
+    {
+      "id": 10,
+      "title": "React JS Development Workshop",
+      "category": "Technology",
+      "tags": ["react", "javascript", "frontend", "web development"],
+      "date": "2025-08-14",
+      "description": "Master the fundamentals of React.js by building interactive user interfaces and learning key concepts like components, hooks, and state management.",
+      "image": "/workS10.jpeg"
+    },
+    {
+      "id": 11,
+      "title": "Children's Learning Workshop",
+      "category": "Education",
+      "tags": ["kids", "learning", "fun", "activities"],
+      "date": "2025-08-08",
+      "description": "Interactive activities designed to boost creativity and cognitive skills in children aged 5-10.",
+      "image": "/workS11.jpeg"
+    },
+    {
+      "id": 12,
+      "title": "Public Speaking for Teens",
+      "category": "Personal Development",
+      "tags": ["communication", "confidence", "teens", "skills"],
+      "date": "2025-08-19",
+      "description": "Build your public speaking and presentation skills in a supportive group setting.",
+      "image": "/workS12.jpeg"
+    }
+  ]
+}

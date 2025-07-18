@@ -554,3 +554,142 @@
     height: 140px;
   }
 }
+
+/* FilterControls.css - Refined Layout */
+.filter-controls {
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 16px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 30px auto;
+  box-shadow: 0 8px 32px rgba(24, 11, 97, 0.15);
+  border: 2px solid rgba(76, 72, 209, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.filter-group {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.search-group input {
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: 2px solid rgba(76, 72, 209, 0.2);
+  font-size: 14px;
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.search-group input:focus {
+  outline: none;
+  border-color: #4c48d1;
+  box-shadow: 0 0 0 3px rgba(76, 72, 209, 0.1);
+}
+
+.select-group select {
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: 2px solid rgba(76, 72, 209, 0.2);
+  background:#4c48d1;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  min-width: 150px;
+  cursor: pointer;
+}
+
+.select-group select[multiple] {
+  min-height: 80px;
+}
+
+.select-group select:focus {
+  outline: none;
+  border-color: #4c48d1;
+  box-shadow: 0 0 0 3px rgba(76, 72, 209, 0.1);
+}
+
+.button-group button {
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  background: linear-gradient(45deg, #180b61, #4c48d1);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.button-group .btn-secondary {
+  background: rgba(76, 72, 209, 0.1);
+  color: #4c48d1;
+  border: 2px solid #4c48d1;
+}
+
+.button-group .btn-secondary:hover {
+  background: #00000013;
+  color: white;
+}
+
+.button-group .clear-filters {
+  background: linear-gradient(45deg, #180b61, #4c48d1);
+  color: white;
+}
+
+.button-group button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(77, 72, 209, 0.003);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .filter-controls {
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .filter-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-group input,
+  .select-group select,
+  .button-group button {
+    width: 100%;
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-controls {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .search-group input,
+  .select-group select,
+  .button-group button {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .select-group select[multiple] {
+    min-height: 70px;
+  }
+
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

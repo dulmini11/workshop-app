@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './HomePage.css'; 
 import heroImage from '../../assets/hero.png';
 import workshopsData from '../../data/workshops.json'; 
 
 const HomePage = () => {
+  const navigate = useNavigate();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [workshops, setWorkshops] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -16,7 +18,7 @@ const HomePage = () => {
     setWorkshops(workshopsData.workshops);
   }, []);
 
-  // Track mouse movement inside hero section for gradient effect useEffect(() => {
+  // Track mouse movement inside hero section for gradient effect 
      useEffect(() => {
     const handleMouseMove = (e) => {
       const rect = e.currentTarget.getBoundingClientRect();
@@ -69,6 +71,11 @@ const HomePage = () => {
     setSelectedCategory('');
     setSelectedTags([]);
     setIsSorted(false);
+  };
+
+  // Handle View More button click - navigate to details page
+  const handleViewMore = (workshopId) => {
+    navigate(`/workshop/${workshopId}`);
   };
 
   return (
@@ -173,7 +180,12 @@ const HomePage = () => {
                 <img src={workshop.image} alt={workshop.title} className="workshop-image" />
                 <h3 className="workshop-title">{workshop.title}</h3>
                 <p className="workshop-date">{workshop.date}</p>
-                <button className="view-more-button">View More →</button>
+                <button 
+                  className="view-more-button"
+                  onClick={() => handleViewMore(workshop.id)}
+                >
+                  View More →
+                </button>
               </div>
             ))}
           </div>

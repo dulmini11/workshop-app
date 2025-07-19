@@ -1,10 +1,17 @@
 import React from 'react'
-import HomePage from "./pages/HomePage/HomePage.jsx";//Importing HomePage component for testing purpose only
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import HomePage from "./pages/HomePage/HomePage.jsx";
+import DetailsPage from './pages/DetailsPage/DetailsPage.jsx';
 const App = () => {
   return (
-    <div><HomePage/></div>//testing purpose only
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/workshop/:id" element={<DetailsPage />} />
+        </Routes>
+      </div>
+    </Router>
   )
 }
-
 export default App

@@ -114,9 +114,14 @@ const DetailsPage = () => {
         </div>
         </div>
       </div>
+      <div className="button-group">
+      <button className="register-button" onClick={handleBackToHome}>
+        Register now
+      </button>
       <button className="back-button" onClick={handleBackToHome}>
-          ← Back to Workshops
-        </button>
+        ← Back to Workshops
+      </button>
+    </div>
     </div> 
   ); 
 };

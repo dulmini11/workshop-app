@@ -103,6 +103,12 @@
   border: 1px solid #c6f6d5;
 }
 
+.organizer{
+  background: #fff0fa;
+  color: #640c6f;
+  border: 1px solid #f4c6f6;
+}
+
 .workshop-description {
   font-size: 1rem;
   line-height: 1.6;

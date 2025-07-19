@@ -48,6 +48,7 @@ const DetailsPage = () => {
                 <span className="date">{workshop.date}</span>
                 <span className="time">{workshop.startTime} - {workshop.endTime}</span>
                 <span className="place">{workshop.place}</span>
+                <span className="organizer">Organized by {workshop.organizer}</span>
               </div>
               <p className="workshop-description">{workshop.description}</p>
               <div className="workshop-tags">

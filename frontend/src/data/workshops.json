@@ -33,7 +33,7 @@
       "startTime": "10:00 AM",
       "endTime": "1:00 PM",
       "place": "Auditorium A, Tech Hub",
-      "description": "Learn full-stack web development from scratch using HTML, CSS, JavaScript, and React.",
+      "description": "This comprehensive bootcamp is designed to take beginners through the fundamentals of full-stack web development. Participants will learn essential coding languages such as HTML, CSS, and JavaScript, along with React for building dynamic user interfaces. The course emphasizes practical, hands-on experience, empowering attendees to build real-world projects. By the end, students will have the confidence and skills to create modern websites and applications, understanding the key principles behind responsive design, DOM manipulation, and frontend/backend integration. This workshop is perfect for anyone looking to jumpstart their career in web development or enhance their coding abilities in a structured, supportive environment.",
       "image": "/workS1.jpeg"
     },
     {
@@ -45,7 +45,7 @@
       "startTime": "2:00 PM",
       "endTime": "5:00 PM",
       "place": "Science Building, Room 201",
-      "description": "Dive into the wonders of space, planets, and stars. Ideal for young explorers!",
+      "description": "Journey beyond the stars in this exciting space science workshop tailored for curious minds of all ages. Attendees will dive deep into the mysteries of the cosmos, learning about planets, stars, galaxies, and the latest NASA missions. The workshop offers interactive presentations and hands-on activities that explore rocket science, space exploration technology, and astronomy basics. Whether you're fascinated by black holes or eager to understand the solar system, this workshop provides a captivating educational experience. Participants will leave with a greater appreciation for the universe, inspired to continue their space exploration journey and develop scientific curiosity.",
       "image": "/workS2.jpeg"
     },
     {
@@ -57,7 +57,7 @@
       "startTime": "9:30 AM",
       "endTime": "12:30 PM",
       "place": "Art Studio Hall B",
-      "description": "Unleash your creativity with brushes, colors, and a canvas. Open to all skill levels.",
+      "description": "Unleash your artistic potential in this vibrant creative art and painting workshop. Designed for artists of all skill levels, participants will experiment with a variety of techniques including brushwork, color mixing, and composition. The session encourages self-expression through guided projects and open creativity, allowing each artist to develop a unique style. With supportive instruction and ample materials, attendees can explore different painting mediums, learn the basics of visual storytelling, and discover how colors influence mood and perception. This workshop fosters a welcoming environment that nurtures imagination and inspires confidence in artistic abilities, perfect for anyone eager to create and connect through art.",
       "image": "/workS3.jpeg"
     },
     {
@@ -69,7 +69,7 @@
       "startTime": "10:00 AM",
       "endTime": "12:00 PM",
       "place": "Green Garden Area",
-      "description": "A hands-on workshop focused on sustainable planting techniques, composting, and eco-friendly gardening practices for all age groups.",
+      "description": "Engage with nature in this interactive sustainable planting workshop, designed to promote eco-friendly gardening practices. Participants will learn about soil health, composting, native plant selection, and water conservation techniques that support environmental balance. The hands-on format encourages attendees to plant seeds, create their own small garden plots, and understand the lifecycle of plants. This workshop emphasizes the importance of sustainability in gardening, reducing waste, and encouraging biodiversity. Ideal for gardeners of all levels, the session offers valuable skills to cultivate thriving, low-impact gardens that contribute positively to the local ecosystem and foster a deeper connection with the environment.",
       "image": "/workS4.jpeg"
     },
     {
@@ -81,31 +81,31 @@
       "startTime": "1:00 PM",
       "endTime": "4:00 PM",
       "place": "Business Center, Room 105",
-      "description": "Gain insights into freelancing, small business setup, and sustainable self-employment tips.",
+      "description": "This workshop equips aspiring entrepreneurs and freelancers with the essential skills needed for successful self-employment. Covering business planning, marketing strategies, financial management, and client relations, participants will gain practical knowledge to start or grow their own ventures. The session emphasizes sustainability and adaptability in a competitive market, highlighting digital tools and networking opportunities. Attendees will engage in interactive activities designed to boost confidence, develop professional skills, and create actionable plans tailored to their goals. Whether launching a startup or freelancing, this workshop provides a supportive environment to learn, share ideas, and build a strong foundation for long-term career success.",
       "image": "/workS5.jpeg"
     },
     {
       "id": 6,
-      "title": "Yoga for Adults",
+      "title": "Yoga for Adults (Adults Wellness )",
       "category": "Health & Wellness",
       "tags": ["yoga", "exercise", "stretch", "balance"],
       "date": "2025-08-09",
       "startTime": "8:00 AM",
       "endTime": "9:30 AM",
       "place": "Wellness Hall, Studio 3",
-      "description": "Relax your body and mind through guided yoga practices suitable for beginners and adults.",
+      "description": "Rejuvenate your body and mind in this calming yoga workshop tailored for adults of all experience levels. The session focuses on foundational yoga poses, breathing techniques, and mindfulness practices designed to improve flexibility, strength, and balance. Participants will be guided through gentle flows that enhance relaxation and reduce stress, making yoga accessible for beginners and refreshing for regular practitioners. This workshop also highlights the connection between physical movement and mental well-being, encouraging a holistic approach to health. Attendees will leave feeling refreshed, centered, and equipped with techniques to incorporate yoga into their daily routines for lasting wellness.",
       "image": "/workS6.jpeg"
     },
     {
       "id": 7,
-      "title": "Robotics for Beginners",
+      "title": "Robotics for Beginners – Exploration",
       "category": "Technology",
       "tags": ["robotics", "engineering", "kids", "stem"],
       "date": "2025-08-16",
       "startTime": "11:00 AM",
       "endTime": "2:00 PM",
       "place": "Innovation Lab, Room 110",
-      "description": "Hands-on workshop to introduce basic robotics concepts and simple robot building.",
+      "description": "Step into the world of robotics with this beginner-friendly workshop focused on fundamental concepts and hands-on building. Perfect for kids and STEM enthusiasts, the workshop covers basic robotics principles, including sensors, actuators, and simple programming. Participants will work with kits to assemble their own robots, learning problem-solving, teamwork, and engineering design. The session encourages creativity and critical thinking while demystifying technology used in everyday life. By the end of the workshop, attendees will gain a foundational understanding of robotics systems and feel inspired to explore further STEM topics and challenges in an engaging and supportive environment.",
       "image": "/workS7.jpeg"
     },
     {
@@ -117,7 +117,7 @@
       "startTime": "10:00 AM",
       "endTime": "12:00 PM",
       "place": "Lecture Hall 2, Psychology Wing",
-      "description": "Focused on managing stress and exam pressure, this session is tailored for A/L students.",
+      "description": "This workshop addresses the unique mental health challenges faced by Advanced Level (A/L) students. Attendees will learn effective stress management techniques, coping strategies for exam pressure, and ways to maintain emotional well-being during demanding academic periods. The session includes discussions on recognizing signs of burnout, seeking support, and building resilience. Facilitators provide practical tools and resources tailored to the A/L student experience, promoting a supportive environment where participants can share concerns and strategies. This workshop aims to empower students with knowledge and skills to prioritize mental health, improve focus, and enhance overall academic performance.",
       "image": "/workS8.jpeg"
     },
     {
@@ -129,7 +129,7 @@
       "startTime": "10:00 AM",
       "endTime": "1:00 PM",
       "place": "Studio A, Media Arts Building",
-      "description": "Capture moments like a pro! Learn the fundamentals of photography and composition.",
+      "description": "Capture stunning images and master your camera with this beginner photography workshop. Attendees will learn essential concepts such as exposure, composition, lighting, and the use of DSLR cameras. The workshop offers hands-on practice sessions where participants can experiment with different techniques and styles under expert guidance. Emphasis is placed on developing a creative eye and understanding how to tell stories through photographs. Whether you want to pursue photography as a hobby or a career, this session provides the foundational skills and confidence needed to take beautiful and impactful pictures in various settings.",
       "image": "/workS9.jpeg"
     },
     {
@@ -141,7 +141,7 @@
       "startTime": "2:30 PM",
       "endTime": "5:30 PM",
       "place": "Coding Lab 1, Tech Campus",
-      "description": "Master the fundamentals of React.js by building interactive user interfaces and learning key concepts like components, hooks, and state management.",
+      "description": "Dive into React.js, one of the most popular JavaScript libraries for building user interfaces, in this focused workshop. Participants will learn how to create reusable components, manage state and props, and handle side effects with hooks. The session is project-based, allowing attendees to build interactive and dynamic web apps while understanding core React concepts. Additionally, the workshop covers best practices for performance optimization and debugging. This hands-on experience is ideal for frontend developers looking to enhance their skills or web enthusiasts aiming to modernize their projects with a robust framework.",
       "image": "/workS10.jpeg"
     },
     {
@@ -153,19 +153,19 @@
       "startTime": "9:00 AM",
       "endTime": "11:00 AM",
       "place": "Kids Corner, Learning Center",
-      "description": "Interactive activities designed to boost creativity and cognitive skills in children aged 5-10.",
+      "description": "This interactive workshop is designed to nurture creativity, curiosity, and cognitive skills in children aged 5 to 10 years. Through fun activities, games, and collaborative projects, children will develop foundational skills in problem-solving, communication, and teamwork. Facilitators encourage exploration and discovery in a supportive environment, making learning enjoyable and effective. The workshop supports early childhood development by blending educational content with engaging play, fostering a lifelong love for learning and confidence in young participants. Parents and guardians will appreciate the holistic approach to child growth offered by this session.",
       "image": "/workS11.jpeg"
     },
     {
       "id": 12,
-      "title": "Public Speaking for Teens",
+      "title": "Public Speaking for Teenagers ",
       "category": "Personal Development",
       "tags": ["communication", "confidence", "teens", "skills"],
       "date": "2025-08-19",
       "startTime": "9:30 AM",
       "endTime": "12:00 PM",
       "place": "Youth Auditorium, Main Hall",
-      "description": "Build your public speaking and presentation skills in a supportive group setting.",
+      "description": "Boost your confidence and communication skills in this engaging public speaking workshop for teenagers. Designed to provide a supportive space for learning, participants will practice speech preparation, delivery techniques, and audience engagement strategies. The workshop covers overcoming stage fright, developing clear messaging, and using body language effectively. Teens will engage in interactive exercises, group feedback sessions, and real-time presentations, fostering a positive experience that builds self-esteem. This workshop is ideal for young individuals looking to improve their public speaking abilities for school, extracurricular activities, and future career opportunities.",
       "image": "/workS12.jpeg"
     }
   ]

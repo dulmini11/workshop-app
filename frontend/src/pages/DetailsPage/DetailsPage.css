@@ -278,11 +278,12 @@
 }
 
 /* Center the buttons with spacing */
-.button-group {
+.button-group-2 {
   display: flex;
   justify-content: center;
   margin-top: 60px;
   gap: 50px;
+  align-items: center;
 }
 
 /* Common button styles */
@@ -295,10 +296,10 @@
   font-size: 16px;
   font-weight: 800;
   border: none;
-  border-radius: 50%;
+  border-radius: 50px;
   cursor: pointer;
   height: 50px;
-  width: 190px;
+  width: 250px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(90, 60, 255, 0.3);
   transition: transform 0.2s ease, box-shadow 0.3s ease;

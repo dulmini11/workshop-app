@@ -101,7 +101,7 @@ const HomePage = () => {
           </p>
           <div className="cta-buttons">
             <button className="btn-primary"><span>Get Started</span></button>
-            <button className="btn-secondary"><span>Learn More</span></button>
+            <button className="btn-secondary-1"><span>Learn More</span></button>
           </div>
         </div>
 
@@ -141,10 +141,10 @@ const HomePage = () => {
 
         {/* Buttons to sort by date or clear all filters */}
         <div className="filter-group button-group">
-          <button className="btn-secondary" onClick={toggleSort}>
+          <button className="-1" onClick={toggleSort}>
             {isSorted ? 'Unsort' : 'Sort by Date'} {/* Toggles sorting state */}
           </button>
-          <button className="btn-secondary clear-filters" onClick={clearFilters}>
+          <button className="btn-secondary-1 clear-filters" onClick={clearFilters}>
             Clear Filters {/* Resets all filters to default */}
           </button>
         </div>

@@ -185,7 +185,7 @@
   }
 }
 
-.btn-primary, .btn-secondary {
+.btn-primary, .btn-secondary-1 {
   padding: 16px 32px;
   border-radius: 50px;
   font-weight: 600;
@@ -223,14 +223,14 @@
   left: 100%;
 }
 
-.btn-secondary {
+.btn-secondary-1 {
   background: rgba(255, 255, 255, 0.1);
   color: white;
   border: 2px solid rgba(90, 60, 255, 0.3);
   backdrop-filter: blur(10px);
 }
 
-.btn-secondary:hover {
+.btn-secondary-1:hover {
   background: rgba(90, 60, 255, 0.2);
   border-color: rgba(90, 60, 255, 0.6);
   transform: translateY(-2px);
@@ -357,7 +357,7 @@
     align-items: center;
   }
 
-  .btn-primary, .btn-secondary {
+  .btn-primary, .btn-secondary-1 {
     width: 100%;
     max-width: 300px;
   }
@@ -384,7 +384,7 @@
     font-size: 1rem;
   }
 
-  .btn-primary, .btn-secondary {
+  .btn-primary, .btn-secondary-1 {
     padding: 12px 24px;
     font-size: 1rem;
   }
@@ -583,7 +583,7 @@
   border-radius: 20px;
   border: 2px solid rgba(76, 72, 209, 0.2);
   font-size: 14px;
-  width: 550px;
+  width: 500px;
   background: white;
   color: #333;
   transition: all 0.3s ease;
@@ -635,13 +635,13 @@
   white-space: nowrap;
 }
 
-.button-group .btn-secondary {
+.button-group .btn-secondary-1 {
   background: rgba(76, 72, 209, 0.1);
   color: #4c48d1;
   border: 2px solid #4c48d1;
 }
 
-.button-group .btn-secondary:hover {
+.button-group .btn-secondary-1:hover {
   background: #00000013;
   color: white;
 }

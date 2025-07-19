@@ -131,7 +131,7 @@ const DetailsPage = () => {
         </div>
       </div>
 
-      <div className="button-group">
+      <div className="button-group-2">
         <button className="register-button" onClick={handleBackToHome}>
           Register now
         </button>

@@ -63,65 +63,82 @@ const DetailsPage = () => {
             </div>
           </div>
 
-          <div className="map-and-contact">
-          {/* Map iframe */}
-          {workshop.map && (
-            <div className="workshop-map">
-              <iframe
-                src={workshop.map}
-                width="100%"
-                height="300"
-                style={{ border: 0, borderRadius: '10px' }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Workshop Location"
-              ></iframe>
+          <div className="workshop-reviews">
+            <h3>Reviews</h3>
+            <div className="reviews-container">
+              {workshop.reviews.map((review, index) => (
+                <div key={index} className="review-item">
+                  <div className="review-header">
+                    <strong>{review.user}</strong>
+                    <span className="review-rating">⭐ {review.rating}</span>
+                  </div>
+                  <p>{review.review}</p>
+                </div>
+              ))}
             </div>
-          )}
+          </div>
 
-          {/* Contact Info */}
-          <div className="workshop-contact">
-          <div className="contact-item">
-            <FaPhoneAlt className="contact-icon" />
-            <div>
-              <h4>Phone Number</h4>
-              <p>{workshop.phone}</p>
+          <div className="map-and-contact">
+            {/* Map iframe */}
+            {workshop.map && (
+              <div className="workshop-map">
+                <iframe
+                  src={workshop.map}
+                  width="100%"
+                  height="300"
+                  style={{ border: 0, borderRadius: '10px' }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Workshop Location"
+                ></iframe>
+              </div>
+            )}
+
+            {/* Contact Info */}
+            <div className="workshop-contact">
+              <div className="contact-item">
+                <FaPhoneAlt className="contact-icon" />
+                <div>
+                  <h4>Phone Number</h4>
+                  <p>{workshop.phone}</p>
+                </div>
+              </div>
+              <div className="contact-item">
+                <FaEnvelope className="contact-icon" />
+                <div>
+                  <h4>Email Address</h4>
+                  <p>{workshop.email}</p>
+                </div>
+              </div>
+              <div className="contact-item">
+                <FaWhatsapp className="contact-icon" />
+                <div>
+                  <h4>WhatsApp</h4>
+                  <p>{workshop.whatsapp}</p>
+                </div>
+              </div>
+              <div className="contact-item">
+                <FaMapMarkerAlt className="contact-icon" />
+                <div>
+                  <h4>Location</h4>
+                  <p>{workshop.place}</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="contact-item">
-            <FaEnvelope className="contact-icon" />
-            <div>
-              <h4>Email Address</h4>
-              <p>{workshop.email}</p>
-            </div>
-          </div>
-          <div className="contact-item">
-            <FaWhatsapp className="contact-icon" />
-            <div>
-              <h4>WhatsApp</h4>
-              <p>{workshop.whatsapp}</p>
-            </div>
-          </div>
-          <div className="contact-item">
-            <FaMapMarkerAlt className="contact-icon" />
-            <div>
-              <h4>Location</h4>
-              <p>{workshop.place}</p>
-            </div>
-          </div>
-        </div>
-        </div>
+
         </div>
       </div>
+
       <div className="button-group">
-      <button className="register-button" onClick={handleBackToHome}>
-        Register now
-      </button>
-      <button className="back-button" onClick={handleBackToHome}>
-        ← Back to Workshops
-      </button>
-    </div>
+        <button className="register-button" onClick={handleBackToHome}>
+          Register now
+        </button>
+        <button className="back-button" onClick={handleBackToHome}>
+          ← Back to Workshops
+        </button>
+      </div>
     </div> 
   ); 
 };

@@ -61,13 +61,29 @@ const DetailsPage = () => {
               <img src={workshop.image} alt={workshop.title} />
             </div>
           </div>
+
+          {/* Map iframe */}
+          {workshop.map && (
+            <div className="workshop-map">
+              <iframe
+                src={workshop.map}
+                width="100%"
+                height="450"
+                style={{ border: 0, borderRadius: '10px' }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Workshop Location"
+              ></iframe>
+            </div>
+          )}
         </div>
       </div>
       <button className="back-button" onClick={handleBackToHome}>
           ← Back to Workshops
         </button>
     </div> 
-  ) 
-} 
- 
-export default DetailsPage
+  ); 
+};
+
+export default DetailsPage;

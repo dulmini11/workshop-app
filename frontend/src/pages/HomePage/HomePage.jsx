@@ -10,28 +10,13 @@ const HomePage = () => {
   const [workshops, setWorkshops] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
-  const [selectedTags, setSelectedTags] = useState([]);
+  const [selectedTags, setSelectedTags] = useState(''); // single string for tag
   const [isSorted, setIsSorted] = useState(false);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
-  useEffect(() => {
-    setWorkshops(workshopsData.workshops);
-  }, []);
-
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      const rect = e.currentTarget.getBoundingClientRect();
-      setMousePosition({
-        x: e.clientX - rect.left,
-        y: e.clientY - rect.top,
-      });
-    };
-  }, []);
-
-  // Set workshops data once on component mount
   useEffect(() => {
     setWorkshops(workshopsData.workshops);
   }, []);
@@ -64,21 +49,19 @@ const HomePage = () => {
   const toggleSort = () => setIsSorted(!isSorted);
 
   const filteredWorkshops = workshops
-  .filter((workshop) => {
-    const search = searchTerm.toLowerCase();
-    const matchesTitle = workshop.title.toLowerCase().includes(search);
-    const matchesTags = workshop.tags.some(tag => tag.toLowerCase().includes(search));
-    const matchesCategory = workshop.category.toLowerCase().includes(search);
-    return matchesTitle || matchesTags || matchesCategory;
-  })
-  .filter((workshop) =>
-    selectedCategory ? workshop.category === selectedCategory : true
-  )
-  .filter((workshop) =>
-    selectedTags.length > 0
-      ? selectedTags.every(tag => workshop.tags.includes(tag))
-      : true
-  );
+    .filter((workshop) => {
+      const search = searchTerm.toLowerCase();
+      const matchesTitle = workshop.title.toLowerCase().includes(search);
+      const matchesTags = workshop.tags.some(tag => tag.toLowerCase().includes(search));
+      const matchesCategory = workshop.category.toLowerCase().includes(search);
+      return matchesTitle || matchesTags || matchesCategory;
+    })
+    .filter((workshop) =>
+      selectedCategory ? workshop.category === selectedCategory : true
+    )
+    .filter((workshop) =>
+      selectedTags ? workshop.tags.includes(selectedTags) : true
+    );
 
   const displayedWorkshops = isSorted
     ? [...filteredWorkshops].sort((a, b) => new Date(a.date) - new Date(b.date))
@@ -87,7 +70,7 @@ const HomePage = () => {
   const clearFilters = () => {
     setSearchTerm('');
     setSelectedCategory('');
-    setSelectedTags([]);
+    setSelectedTags('');
     setIsSorted(false);
   };
 
@@ -167,6 +150,19 @@ const HomePage = () => {
           </select>
         </div>
 
+        {/* Dropdown to filter workshops by tag */}
+        <div className="filter-group select-group">
+          <select
+            value={selectedTags}
+            onChange={(e) => setSelectedTags(e.target.value)} // Updates selected tag
+          >
+            <option value="">All Tags</option>
+            {workshopsData.tags.map((tag) => (
+              <option key={tag} value={tag}>{tag}</option>
+            ))}
+          </select>
+        </div>
+
         {/* Buttons to sort by date or clear all filters */}
         <div className="filter-group button-group">
           <button className="-1" onClick={toggleSort}>
@@ -177,24 +173,7 @@ const HomePage = () => {
           </button>
         </div>
 
-        {/* Multi-select dropdown to filter workshops by tags */}
-        {/* <div className="filter-group select-group">
-          <select
-            multiple
-            value={selectedTags}
-            onChange={(e) => {
-              const selected = Array.from(e.target.selectedOptions, option => option.value);
-              setSelectedTags(selected); // Updates selected tags array
-            }}
-          >
-            {workshopsData.tags.map((tag) => (
-              <option key={tag} value={tag}>{tag}</option> // Dynamically renders tag options
-            ))}
-          </select>
-        </div> */}
-
       </div>
-
 
       {/* Workshop Grid */}
       <div className="workshop-grid-section">

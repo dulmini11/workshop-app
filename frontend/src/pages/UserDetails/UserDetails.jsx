@@ -123,7 +123,7 @@ function UserDetails({ setIsLoggedIn }) {
   return (
     <div className="user-details-container">
       <div className="header-section">
-        <h1 className="page-title">Account Settings</h1>
+        <h1 className="section-title">Account Settings</h1>
         <button className="logout-button" onClick={handleLogout}>
           Logout
         </button>

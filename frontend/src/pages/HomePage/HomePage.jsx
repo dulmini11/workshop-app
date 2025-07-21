@@ -13,6 +13,24 @@ const HomePage = () => {
   const [selectedTags, setSelectedTags] = useState([]);
   const [isSorted, setIsSorted] = useState(false);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
+  useEffect(() => {
+    setWorkshops(workshopsData.workshops);
+  }, []);
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const rect = e.currentTarget.getBoundingClientRect();
+      setMousePosition({
+        x: e.clientX - rect.left,
+        y: e.clientY - rect.top,
+      });
+    };
+  }, []);
+
   // Set workshops data once on component mount
   useEffect(() => {
     setWorkshops(workshopsData.workshops);
@@ -100,7 +118,17 @@ const HomePage = () => {
             Explore hands-on workshops, register with ease, and shape your future with every skill you learn.
           </p>
           <div className="cta-buttons">
-            <button className="btn-primary"><span>Get Started</span></button>
+            <button
+              className="btn-primary"
+              onClick={() => {
+                const element = document.getElementById('filter-controls');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
+              <span>Get Started</span>
+            </button>
             <button className="btn-secondary-1"><span>Learn More</span></button>
           </div>
         </div>
@@ -114,7 +142,7 @@ const HomePage = () => {
       </div>
 
       {/* Filter Controls container holding all filtering UI elements */}
-      <div className="filter-controls">
+      <div id="filter-controls" className="filter-controls">
 
         {/* Search input for filtering workshops by title or tags */}
         <div className="filter-group search-group">

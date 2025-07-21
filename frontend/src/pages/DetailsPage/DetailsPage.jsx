@@ -1,12 +1,16 @@
-import React from 'react' 
+import React, { useEffect } from 'react'; 
 import { useParams, useNavigate } from 'react-router-dom';
 import workshopsData from '../../data/workshops.json'; 
 import './DetailsPage.css';
 import { FaPhoneAlt, FaEnvelope, FaWhatsapp, FaMapMarkerAlt } from 'react-icons/fa';
 
 const DetailsPage = () => { 
-  const { id } = useParams(); // Get workshop ID from URL
+  const { id } = useParams();
   const navigate = useNavigate(); // For navigation
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [id]);
   
   // Find the specific workshop by ID (convert string to number)
   const workshop = workshopsData.workshops.find(w => w.id === parseInt(id));

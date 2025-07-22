@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './HomePage.css'; 
 import heroImage from '../../assets/hero.png';
 import workshopsData from '../../data/workshops.json'; 
+import { FiSearch } from 'react-icons/fi';
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -61,7 +62,12 @@ const HomePage = () => {
     )
     .filter((workshop) =>
       selectedTags ? workshop.tags.includes(selectedTags) : true
-    );
+    )
+
+    .filter((workshop) => {
+      const search = searchTerm.toLowerCase();
+      return workshop.title.toLowerCase().includes(search);
+    });
 
   const displayedWorkshops = isSorted
     ? [...filteredWorkshops].sort((a, b) => new Date(a.date) - new Date(b.date))
@@ -127,14 +133,19 @@ const HomePage = () => {
       {/* Filter Controls container holding all filtering UI elements */}
       <div id="filter-controls" className="filter-controls">
 
-        {/* Search input for filtering workshops by title or tags */}
-        <div className="filter-group search-group">
-          <input
-            type="text"
-            placeholder="Search workshops (by title or tag)"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)} // Updates the search term state
-          />
+        {/* Search input for filtering workshops by title only */}
+        <div className="filter-group">
+          <div className="search-wrapper search-bar">
+            <input
+              type="text"
+              placeholder="Search workshops by title"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <span className="search-icon">
+              <FiSearch />
+            </span>
+          </div>
         </div>
 
         {/* Dropdown to filter workshops by category */}
@@ -154,7 +165,7 @@ const HomePage = () => {
         <div className="filter-group select-group">
           <select
             value={selectedTags}
-            onChange={(e) => setSelectedTags(e.target.value)} // Updates selected tag
+            onChange={(e) => setSelectedTags(e.target.value)}
           >
             <option value="">All Tags</option>
             {workshopsData.tags.map((tag) => (
@@ -172,7 +183,6 @@ const HomePage = () => {
             Clear Filters {/* Resets all filters to default */}
           </button>
         </div>
-
       </div>
 
       {/* Workshop Grid */}

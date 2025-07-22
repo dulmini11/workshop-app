@@ -1,0 +1,398 @@
+/* ReviewsForm.css */
+
+.review-form {
+  max-width: 400px;
+  width: 100%;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e1e5e9;
+  margin-top: 100px;
+  margin-left: 50%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.review-form h4 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.review-form input[type="text"],
+.review-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background-color: #fafafa;
+  margin-bottom: 1.5rem;
+  box-sizing: border-box;
+}
+
+.review-form input[type="text"]:focus,
+.review-form textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+  transform: translateY(-1px);
+}
+
+.review-form input[type="text"]:hover,
+.review-form textarea:hover {
+  border-color: #bdc3c7;
+}
+
+.review-form textarea {
+  min-height: 120px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.review-form input[type="text"]::placeholder,
+.review-form textarea::placeholder {
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+.review-form label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 600;
+  color: #34495e;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.review-form select {
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fafafa;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 80px;
+}
+
+.review-form select:focus {
+  outline: none;
+  border-color: #3498db;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.review-form select:hover {
+  border-color: #bdc3c7;
+}
+
+.submit-review-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 1rem;
+}
+
+.submit-review-btn:hover {
+  background: linear-gradient(135deg, #2980b9, #1abc9c);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.3);
+}
+
+.submit-review-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(52, 152, 219, 0.2);
+}
+
+.submit-review-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+}
+
+/* Animation for form appearance */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.review-form {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* ======== MEDIA QUERIES ======== */
+
+/* Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+  .review-form {
+    max-width: 600px;
+    padding: 2.5rem;
+  }
+  
+  .review-form h4 {
+    font-size: 2rem;
+  }
+  
+  .review-form input[type="text"],
+  .review-form textarea,
+  .review-form select {
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+}
+
+/* Desktop (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .review-form {
+    max-width: 550px;
+    padding: 2.25rem;
+  }
+  
+  .review-form h4 {
+    font-size: 1.9rem;
+  }
+}
+
+/* Tablet (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .review-form {
+    max-width: 90%;
+    margin: 1.5rem auto;
+    padding: 2rem;
+  }
+  
+  .review-form h4 {
+    font-size: 1.7rem;
+  }
+  
+  .review-form input[type="text"],
+  .review-form textarea,
+  .review-form select,
+  .submit-review-btn {
+    font-size: 16px; /* Prevents zoom on iOS Safari */
+  }
+  
+  .review-form label {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .review-form select {
+    align-self: flex-start;
+    min-width: 100px;
+  }
+}
+
+/* Mobile Large (576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .review-form {
+    max-width: 95%;
+    margin: 1rem auto;
+    padding: 1.5rem;
+  }
+  
+  .review-form h4 {
+    font-size: 1.6rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .review-form input[type="text"],
+  .review-form textarea {
+    margin-bottom: 1.25rem;
+  }
+  
+  .review-form input[type="text"],
+  .review-form textarea,
+  .review-form select,
+  .submit-review-btn {
+    font-size: 16px;
+    padding: 0.875rem;
+  }
+  
+  .review-form label {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .review-form select {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .submit-review-btn {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
+
+/* Mobile Small (up to 575px) */
+@media (max-width: 575px) {
+  .review-form {
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  .review-form h4 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .review-form input[type="text"],
+  .review-form textarea {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    font-size: 16px;
+  }
+  
+  .review-form textarea {
+    min-height: 100px;
+  }
+  
+  .review-form label {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .review-form select {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 16px;
+  }
+  
+  .submit-review-btn {
+    padding: 0.875rem;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+  }
+}
+
+/* Extra Small Mobile (up to 375px) */
+@media (max-width: 375px) {
+  .review-form {
+    margin: 0.25rem;
+    padding: 0.75rem;
+  }
+  
+  .review-form h4 {
+    font-size: 1.3rem;
+  }
+  
+  .review-form input[type="text"],
+  .review-form textarea,
+  .review-form select {
+    padding: 0.625rem;
+  }
+  
+  .submit-review-btn {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .review-form {
+    margin: 0.5rem auto;
+    padding: 1rem;
+  }
+  
+  .review-form h4 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .review-form input[type="text"],
+  .review-form textarea {
+    margin-bottom: 0.75rem;
+  }
+  
+  .review-form textarea {
+    min-height: 80px;
+  }
+  
+  .review-form label {
+    margin-bottom: 0.75rem;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .review-form {
+    border-width: 0.5px;
+  }
+  
+  .review-form input[type="text"],
+  .review-form textarea,
+  .review-form select {
+    border-width: 1px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .review-form {
+    background: #2c3e50;
+    border-color: #34495e;
+    color: #ecf0f1;
+  }
+  
+  .review-form h4 {
+    color: #ecf0f1;
+    border-bottom-color: #3498db;
+  }
+  
+  .review-form input[type="text"],
+  .review-form textarea,
+  .review-form select {
+    background-color: #34495e;
+    border-color: #4a5f7a;
+    color: #ecf0f1;
+  }
+  
+  .review-form input[type="text"]::placeholder,
+  .review-form textarea::placeholder {
+    color: #95a5a6;
+  }
+  
+  .review-form input[type="text"]:focus,
+  .review-form textarea:focus,
+  .review-form select:focus {
+    background-color: #34495e;
+    border-color: #3498db;
+  }
+  
+  .review-form label {
+    color: #bdc3c7;
+  }
+}

@@ -6,6 +6,7 @@ import Navbar from './components/layout/Navbar.jsx';
 import Footer from './components/layout/Footer.jsx';
 import LoginRegister from './pages/LoginRegister/LoginRegister.jsx';
 import UserDetails from './pages/UserDetails/UserDetails.jsx';
+import ReviewsForm from './pages/ReviewsForm/ReviewsForm.jsx';
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(() => {
@@ -41,6 +42,7 @@ const App = () => {
             path="/loginRegister"
             element={<LoginRegister setIsLoggedIn={setIsLoggedIn} />}
           />
+          <Route path="/add-review/:id" element={<ReviewsForm />} />
         </Routes>
         <Footer />
       </div>

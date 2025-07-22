@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';  // <-- import Link
-import './navbar.css';
+import './Navbar.css';
 // import logo from '../../assets/herocar.jpg';
 
 

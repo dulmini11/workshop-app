@@ -27,6 +27,14 @@ const DetailsPage = () => {
     navigate('/');
   };
 
+  const handleAddReviewClick = () => {
+  if (!isLoggedIn) {
+    navigate('/loginRegister');
+  } else {
+    navigate(`/add-review/${workshop.id}`);
+  }
+  };
+
   const handleRegisterClick = () => {
     if (!isLoggedIn) {
     navigate('/loginRegister');
@@ -71,7 +79,7 @@ const DetailsPage = () => {
       <div className="page-header">
         <h1>Workshop Details</h1>
       </div>
-      
+
       <div className="workshops-container">
         <div className="workshop-card-2">
           <div className="workshop-content">
@@ -109,6 +117,9 @@ const DetailsPage = () => {
                 </div>
               ))}
             </div>
+            <button className="add-review-btn" onClick={handleAddReviewClick}>
+              Add Your Review
+            </button>
           </div>
 
           <div className="map-and-contact">

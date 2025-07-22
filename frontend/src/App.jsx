@@ -1,22 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route,Navigate} from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage.jsx';
 import DetailsPage from './pages/DetailsPage/DetailsPage.jsx';
 import Navbar from './components/layout/Navbar.jsx';
 import Footer from './components/layout/Footer.jsx';
-import LoginRegister from './pages/LoginRegister/LoginRegister';
+import LoginRegister from './pages/LoginRegister/LoginRegister.jsx';
 import UserDetails from './pages/UserDetails/UserDetails.jsx';
 
 const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(() => {
+    return localStorage.getItem('isLoggedIn') === 'true';
+  });
 
-  // Persist login status on page refresh
+  // Persist login status on change
   useEffect(() => {
-    const storedStatus = localStorage.getItem('isLoggedIn');
-    if (storedStatus === 'true') {
-      setIsLoggedIn(true);
-    }
-  }, []);
+    localStorage.setItem('isLoggedIn', isLoggedIn);
+  }, [isLoggedIn]);
 
   return (
     <Router>
@@ -25,16 +24,22 @@ const App = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/workshop/:id" element={<DetailsPage />} />
-          {/* Single /profile route handling login and user details */}
+
+          {/* Protected route: show UserDetails only if logged in */}
           <Route
             path="/profile"
             element={
               isLoggedIn ? (
                 <UserDetails setIsLoggedIn={setIsLoggedIn} />
               ) : (
-                <LoginRegister setIsLoggedIn={setIsLoggedIn} />
+                <Navigate to="/loginRegister" />
               )
             }
+          />
+          {/*Login/Register page route */}
+          <Route
+            path="/loginRegister"
+            element={<LoginRegister setIsLoggedIn={setIsLoggedIn} />}
           />
         </Routes>
         <Footer />

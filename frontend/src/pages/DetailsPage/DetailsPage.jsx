@@ -1,26 +1,55 @@
-import React, { useEffect } from 'react'; 
+import React, { useEffect, useState } from 'react'; 
 import { useParams, useNavigate } from 'react-router-dom';
 import workshopsData from '../../data/workshops.json'; 
 import './DetailsPage.css';
 import { FaPhoneAlt, FaEnvelope, FaWhatsapp, FaMapMarkerAlt } from 'react-icons/fa';
+import LoginRegister from '../LoginRegister/LoginRegister'; // Make sure path is correct
 
 const DetailsPage = () => { 
   const { id } = useParams();
   const navigate = useNavigate(); // For navigation
 
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [id]);
+    const status = localStorage.getItem('isLoggedIn');
+    setIsLoggedIn(status === 'true');
+  }, []);
   
-  // Find the specific workshop by ID (convert string to number)
   const workshop = workshopsData.workshops.find(w => w.id === parseInt(id));
+  const registeredWorkshopIds = JSON.parse(localStorage.getItem('registeredWorkshops') || '[]');
+  const isAlreadyRegistered = workshop && registeredWorkshopIds.includes(workshop.id);
 
   // Handle back to home navigation
   const handleBackToHome = () => {
     navigate('/');
   };
 
-  // If workshop not found, show error message
+  const handleRegisterClick = () => {
+    if (!isLoggedIn) {
+    navigate('/loginRegister');
+    return;
+  }
+
+    let updatedIds;
+    if (isAlreadyRegistered) {
+      updatedIds = registeredWorkshopIds.filter(workshopId => workshopId !== workshop.id);
+    } else {
+      updatedIds = [...registeredWorkshopIds, workshop.id];
+    }
+
+    localStorage.setItem('registeredWorkshops', JSON.stringify(updatedIds));
+    window.location.reload(); // Or use state update instead of reload for better UX
+  };
+
+  const handleLoginSuccess = () => {
+    localStorage.setItem('isLoggedIn', 'true');
+    setIsLoggedIn(true);
+    setShowLoginModal(false);
+  };
+
   if (!workshop) {
     return (
       <div className="details-page">
@@ -136,8 +165,10 @@ const DetailsPage = () => {
       </div>
 
       <div className="button-group-2">
-        <button className="register-button" onClick={handleBackToHome}>
-          Register now
+        <button className="register-button" onClick={handleRegisterClick}>
+          {isLoggedIn
+            ? (isAlreadyRegistered ? 'Unregister' : 'Register Now')
+            : 'Register Now'}
         </button>
         <button className="back-button" onClick={handleBackToHome}>
           ← Back to Workshops

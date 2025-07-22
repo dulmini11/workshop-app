@@ -67,10 +67,12 @@
 }
 
 .contact-info p {
-  color: #cccccc;
-  font-size: 14px;
-  margin-bottom: 8px;
-  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin: 8px 0;
+  color: #fff; 
+  font-size: 15px;
 }
 
 .footer-bottom {

@@ -189,7 +189,6 @@ function UserDetails({ setIsLoggedIn }) {
         </div>
       </div>
 
-
       <div className="dashboard-section">
         <h2 className="section-title">My Dashboard</h2>
         <div className="dashboard-container">

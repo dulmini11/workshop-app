@@ -1,4 +1,5 @@
 import React from 'react';
+import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi';
 import './Footer.css';
 
 const Footer = () => {
@@ -39,9 +40,9 @@ const Footer = () => {
           <div className="footer-section">
             <h3>Contact Info</h3>
             <div className="contact-info">
-              <p>📧 info@company.com</p>
-              <p>📞 071 00 00 928 8</p>
-              <p>📍 123 Main St, City, State 12345</p>
+              <p><FiMail /> info@company.com</p>
+              <p><FiPhone /> 071 00 00 928 8</p>
+              <p><FiMapPin /> 123 Main St, City, State 12345</p>
             </div>
           </div>
         </div>

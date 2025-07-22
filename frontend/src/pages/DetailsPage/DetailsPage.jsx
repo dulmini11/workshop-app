@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import workshopsData from '../../data/workshops.json'; 
 import './DetailsPage.css';
 import { FaPhoneAlt, FaEnvelope, FaWhatsapp, FaMapMarkerAlt } from 'react-icons/fa';
-import LoginRegister from '../LoginRegister/LoginRegister'; // Make sure path is correct
+import { FiCalendar, FiClock, FiMapPin, FiUser, FiTag } from 'react-icons/fi';
 
 const DetailsPage = () => { 
   const { id } = useParams();
@@ -77,20 +77,19 @@ const DetailsPage = () => {
   return (
     <div className="details-page"> 
       <div className="page-header">
-        <h1>Workshop Details</h1>
+        <h1>{workshop.title}</h1>
       </div>
 
       <div className="workshops-container">
         <div className="workshop-card-2">
           <div className="workshop-content">
             <div className="workshop-info">
-              <h2 className="workshop-title-2">{workshop.title}</h2>
               <div className="workshop-meta">
-                <span className="category">{workshop.category}</span>
-                <span className="date">{workshop.date}</span>
-                <span className="time">{workshop.startTime} - {workshop.endTime}</span>
-                <span className="place">{workshop.place}</span>
-                <span className="organizer">Organized by {workshop.organizer}</span>
+                <span className="category"><FiTag /> {workshop.category}</span>
+                <span className="date"><FiCalendar /> {workshop.date}</span>
+                <span className="time"><FiClock /> {workshop.startTime} - {workshop.endTime}</span>
+                <span className="place"><FiMapPin /> {workshop.place}</span>
+                <span className="organizer"><FiUser /> Organized by {workshop.organizer}</span>
               </div>
               <p className="workshop-description">{workshop.description}</p>
               <div className="workshop-tags">
@@ -103,25 +102,6 @@ const DetailsPage = () => {
               <img src={workshop.image} alt={workshop.title} />
             </div>
           </div>
-
-          <div className="workshop-reviews">
-            <h3>Reviews</h3>
-            <div className="reviews-container">
-              {workshop.reviews.map((review, index) => (
-                <div key={index} className="review-item">
-                  <div className="review-header">
-                    <strong>{review.user}</strong>
-                    <span className="review-rating">⭐ {review.rating}</span>
-                  </div>
-                  <p>{review.review}</p>
-                </div>
-              ))}
-            </div>
-            <button className="add-review-btn" onClick={handleAddReviewClick}>
-              Add Your Review
-            </button>
-          </div>
-
           <div className="map-and-contact">
             {/* Map iframe */}
             {workshop.map && (
@@ -171,7 +151,24 @@ const DetailsPage = () => {
               </div>
             </div>
           </div>
-
+          
+          <div className="workshop-reviews">
+            <h3>Reviews</h3>
+            <div className="reviews-container">
+              {workshop.reviews.map((review, index) => (
+                <div key={index} className="review-item">
+                  <div className="review-header">
+                    <strong>{review.user}</strong>
+                    <span className="review-rating">⭐ {review.rating}</span>
+                  </div>
+                  <p>{review.review}</p>
+                </div>
+              ))}
+            </div>
+            <button className="add-review-btn" onClick={handleAddReviewClick}>
+              Add Your Review
+            </button>
+          </div>
         </div>
       </div>
 

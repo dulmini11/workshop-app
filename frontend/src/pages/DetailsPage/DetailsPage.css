@@ -1,11 +1,12 @@
 .details-page {
   margin-top: 50px;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   padding: 20px;
   background-color: #000000;
   object-fit: cover;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .page-header {
@@ -75,6 +76,9 @@
 }
 
 .workshop-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   font-size: 0.9rem;
   padding: 5px 12px;
   border-radius: 20px;

@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { User, Mail, Lock, Camera, Edit2, Save, X } from 'lucide-react';
 import mockUsers from '../../data/mockUsers.json';
+import workshopsData from '../../data/workshops.json';
+import { useNavigate } from 'react-router-dom';
 import './UserDetails.css';
 
 function UserDetails({ setIsLoggedIn }) {
-  // Initialize user data from localStorage or fallback to mockUsers
+  // User data state, initialized from localStorage or fallback to mockUsers
   const [userData, setUserData] = useState(() => {
     const savedData = localStorage.getItem('userData');
     if (savedData) {
@@ -17,18 +19,32 @@ function UserDetails({ setIsLoggedIn }) {
       profilePicture: mockUsers[0]?.profilePicture || null
     };
   });
-  
-  // Save to localStorage when data changes
+
+  // Registered workshops state
+  const [registeredWorkshops, setRegisteredWorkshops] = useState([]);
+
+  const navigate = useNavigate();
+
+  // Save userData to localStorage when it changes
   useEffect(() => {
     localStorage.setItem('userData', JSON.stringify(userData));
   }, [userData]);
+
+  // Load registered workshops from localStorage on mount
+  useEffect(() => {
+    const registeredIds = JSON.parse(localStorage.getItem('registeredWorkshops') || '[]');
+    const filtered = workshopsData.workshops.filter(workshop =>
+      registeredIds.includes(workshop.id)
+    );
+    setRegisteredWorkshops(filtered);
+  }, []);
 
   const [isEditing, setIsEditing] = useState({
     username: false,
     password: false,
     email: false
   });
-  
+
   const [editValues, setEditValues] = useState({
     username: userData.username,
     password: userData.password,
@@ -67,6 +83,10 @@ function UserDetails({ setIsLoggedIn }) {
       };
       reader.readAsDataURL(file);
     }
+  };
+
+  const handleViewMore = (workshopId) => {
+    navigate(`/workshop/${workshopId}`);
   };
 
   const ProfileField = ({ field, icon: Icon, label, type = "text", isPassword = false }) => (
@@ -172,9 +192,42 @@ function UserDetails({ setIsLoggedIn }) {
 
       <div className="dashboard-section">
         <h2 className="section-title">My Dashboard</h2>
-        <div className="dashboard-box">
-          <p>Dashboard content will go here...</p>
+        <div className="dashboard-container">
+        {/* Left Side - Own Reviews */}
+        <div className="dashboard-box workshops-box">
+          <h2 className="workshop-title">Registered Workshops</h2>
+          {registeredWorkshops.length === 0 ? (
+            <p className="workshop-date">You have not registered for any workshops yet.</p>
+          ) : (
+            <div className="registered-workshops-grid">
+              {registeredWorkshops.map((workshop) => (
+                <div key={workshop.id} className="workshop-card">
+                  <img
+                    src={workshop.image}
+                    alt={workshop.title}
+                    className="workshop-image"
+                  />
+                  <h3 className="workshop-title">{workshop.title}</h3>
+                  <p className="workshop-date">{workshop.date}</p>
+                  <p className="workshop-place">{workshop.place}</p>
+                  <button
+                    className="view-more-button"
+                    onClick={() => handleViewMore(workshop.id)}
+                  >
+                    View More →
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
+        <div className="dashboard-box reviews-box">
+          <h2 className="workshop-title">Own Reviews</h2>
+          {/* Add your own review content here, or keep it empty for now */}
+        </div>
+
+        {/* Right Side - Registered Workshops */}
+      </div>
       </div>
     </div>
   );

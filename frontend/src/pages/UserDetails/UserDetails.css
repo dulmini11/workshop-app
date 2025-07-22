@@ -296,17 +296,24 @@
   margin-bottom: 20px;
 }
 
-.dashboard-box {
-  background: #1a1a1a;
-  border-radius: 16px;
-  padding: 40px;
-  box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.5);
-  border: 1px solid #333333;
-  transition: all 0.3s ease;
+.dashboard-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.dashboard-box:hover {
-  border-color: #404040;
+.dashboard-box {
+  flex: 1;
+  min-width: 300px;
+}
+
+.reviews-box {
+  max-width: 45%;
+}
+
+.workshops-box {
+  max-width: 50%;
 }
 
 /* Responsive Design */
@@ -315,11 +322,11 @@
     max-width: 100%;
     padding: 16px;
   }
-  
+
   .page-title {
     font-size: 2rem;
   }
-  
+
   .account-settings-box,
   .dashboard-box {
     padding: 30px;
@@ -332,34 +339,52 @@
     align-items: flex-start;
     gap: 16px;
   }
-  
+
   .row-layout {
     flex-direction: column;
     gap: 30px;
     align-items: center;
   }
-  
+
   .left-side {
     align-self: center;
   }
-  
+
   .right-side {
     width: 100%;
   }
-  
+
   .profile-picture,
   .profile-picture-placeholder {
     width: 120px;
     height: 120px;
   }
-  
+
   .edit-mode {
     flex-direction: column;
     align-items: stretch;
   }
-  
+
   .edit-buttons {
     justify-content: center;
+  }
+
+  /* Dashboard Section (768px) */
+  .dashboard-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .dashboard-box,
+  .reviews-box,
+  .workshops-box {
+    max-width: 100%;
+    min-width: unset;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    text-align: center;
   }
 }
 
@@ -368,18 +393,28 @@
   .dashboard-box {
     padding: 20px;
   }
-  
+
   .page-title {
     font-size: 1.75rem;
   }
-  
+
   .row-layout {
     gap: 20px;
   }
-  
+
   .profile-picture,
   .profile-picture-placeholder {
     width: 100px;
     height: 100px;
+  }
+
+  /* Dashboard Section (480px) */
+  .section-title {
+    font-size: 1.25rem;
+  }
+
+  .dashboard-container {
+    gap: 20px;
+    width: 50%;
   }
 }

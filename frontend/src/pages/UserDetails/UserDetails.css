@@ -1,6 +1,6 @@
 /* Main Container */
 .user-details-container {
-  width: 1420px;
+  width: 1300px;
   margin: 0 auto;
   padding: 20px;
   background-color: #000000;
@@ -291,6 +291,7 @@
 /* Dashboard Section */
 .dashboard-section {
   margin-top: 40px;
+  border-radius: 2%;
   background-color: #5d5c5c2d;
 }
 
@@ -319,6 +320,8 @@
   padding-bottom: 20px;
   scrollbar-width: thin;
   scrollbar-color: #555 #222;
+  margin-left: 20px;
+  margin-left: 20px;
 }
 
 .registered-workshops-row::-webkit-scrollbar {
@@ -359,6 +362,27 @@
 /* Make each dashboard box full width */
 .dashboard-box {
   width: 100%;
+  border-radius: 5%;
+  margin-left: 20px;
+  margin-left: 20px;
+}
+
+.dashboard-reviews{
+  margin-left: 20px;
+  margin-left: 20px;
+}
+
+.review-item {
+  background-color: #121217;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(28, 28, 48, 0.4);
+  color: #e0e0e0;
+}
+.review-item h4 {
+  margin-bottom: 8px;
+  color: #6c63ff;
 }
 
 /* Responsive Design */
@@ -434,6 +458,9 @@
 }
 
 @media (max-width: 480px) {
+  .registered-workshops-row {
+  width: 180%;
+}
   .account-settings-box,
   .dashboard-box {
     padding: 20px;

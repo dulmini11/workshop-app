@@ -22,6 +22,7 @@ function UserDetails({ setIsLoggedIn }) {
 
   // Registered workshops state
   const [registeredWorkshops, setRegisteredWorkshops] = useState([]);
+  const [ownReviews, setOwnReviews] = useState([]);
 
   const navigate = useNavigate();
 
@@ -31,13 +32,32 @@ function UserDetails({ setIsLoggedIn }) {
   }, [userData]);
 
   // Load registered workshops from localStorage on mount
-  useEffect(() => {
-    const registeredIds = JSON.parse(localStorage.getItem('registeredWorkshops') || '[]');
-    const filtered = workshopsData.workshops.filter(workshop =>
-      registeredIds.includes(workshop.id)
-    );
-    setRegisteredWorkshops(filtered);
-  }, []);
+  // Load own reviews from localStorage
+useEffect(() => {
+  const registeredIds = JSON.parse(localStorage.getItem('registeredWorkshops') || '[]');
+  const filtered = workshopsData.workshops.filter(workshop =>
+    registeredIds.includes(workshop.id)
+  );
+  setRegisteredWorkshops(filtered);
+
+  const allReviews = JSON.parse(localStorage.getItem('reviews') || '{}');
+  const userReviews = [];
+
+  Object.keys(allReviews).forEach(workshopId => {
+    allReviews[workshopId].forEach(review => {
+      if (review.user === userData.username) {
+        userReviews.push({
+          ...review,
+          workshopId,
+          workshop: workshopsData.workshops.find(w => w.id === workshopId)
+        });
+      }
+    });
+  });
+
+  setOwnReviews(userReviews);
+}, [userData.username]);
+
 
   const [isEditing, setIsEditing] = useState({
     username: false,
@@ -192,8 +212,6 @@ function UserDetails({ setIsLoggedIn }) {
       <h2 className="section-title">My Dashboard</h2>
       <div className="dashboard-section">
         <div className="dashboard-container">
-        {/* Left Side - Own Reviews */}
-        <div className="dashboard-box workshops-box">
           <h2 className="workshop-title">Registered Workshops</h2>
           {registeredWorkshops.length === 0 ? (
             <p className="workshop-date">You have not registered for any workshops yet.</p>
@@ -221,13 +239,24 @@ function UserDetails({ setIsLoggedIn }) {
           )}
         </div>
         {/* Right Side - Registered Workshops */}
-        <div className="dashboard-box reviews-box">
+        <div className="dashboard-reviews">
           <h2 className="workshop-title">Own Reviews</h2>
-          {/* Add your own review content here, or keep it empty for now */}
-        </div>
+        <div className="reviews-container">
+        {ownReviews.length === 0 ? (
+          <p>You have not submitted any reviews yet.</p>
+        ) : (
+          ownReviews.map((review, index) => (
+            <div key={index} className="review-item">
+              <h4>{review.workshop?.title}</h4>
+              <p><strong>Rating:</strong> {review.rating} ⭐</p>
+              <p>{review.review}</p>
+            </div>
+          ))
+        )}
       </div>
       </div>
-    </div>
+      </div>
+      </div>
   );
 }
 

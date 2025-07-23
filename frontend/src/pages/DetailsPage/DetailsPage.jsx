@@ -11,6 +11,7 @@ const DetailsPage = () => {
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
+  const [message, setMessage] = useState('');
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -28,28 +29,37 @@ const DetailsPage = () => {
   };
 
   const handleAddReviewClick = () => {
-  if (!isLoggedIn) {
-    navigate('/loginRegister');
-  } else {
-    navigate(`/add-review/${workshop.id}`);
-  }
+    if (!isLoggedIn) {
+      navigate('/loginRegister');
+    } else {
+      navigate(`/add-review/${workshop.id}`);
+    }
   };
 
   const handleRegisterClick = () => {
     if (!isLoggedIn) {
-    navigate('/loginRegister');
-    return;
-  }
+      navigate('/loginRegister');
+      return;
+    }
 
     let updatedIds;
+    let newMessage = '';
+
     if (isAlreadyRegistered) {
       updatedIds = registeredWorkshopIds.filter(workshopId => workshopId !== workshop.id);
+      newMessage = 'Successfully unregistered from the workshop!';
     } else {
       updatedIds = [...registeredWorkshopIds, workshop.id];
+      newMessage = 'Successfully registered for the workshop!';
     }
 
     localStorage.setItem('registeredWorkshops', JSON.stringify(updatedIds));
-    window.location.reload(); // Or use state update instead of reload for better UX
+    setMessage(newMessage);
+
+    setTimeout(() => {
+      setMessage('');
+      window.location.reload(); // Or use state update instead of reload for better UX
+    }, 2000);
   };
 
   const handleLoginSuccess = () => {
@@ -97,6 +107,8 @@ const DetailsPage = () => {
                   <span key={index} className="tag">{tag}</span>
                 ))}
               </div>
+              {/* Show success message */}
+              {message && <p className="success-message"><span>✔ </span>{message}</p>}
               <button className="register-button" onClick={handleRegisterClick}>
                 {isLoggedIn
                   ? (isAlreadyRegistered ? 'Unregister' : 'Register Now')

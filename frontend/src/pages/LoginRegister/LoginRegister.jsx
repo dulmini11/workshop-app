@@ -48,8 +48,7 @@ const LoginRegister = ({ setIsLoggedIn }) => {
       return;
     }
     alert(`Registered with username: ${registerUsername}`);
-    // You can add registration logic here (e.g., save new user)
-    setShowRegister(false); // Optionally switch to login after registration
+    setShowRegister(false);
   };
 
   return (

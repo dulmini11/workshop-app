@@ -37,7 +37,7 @@
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 1300px;
+  max-height: 1400px;
 }
 
 .workshop-card-2:hover {
@@ -343,7 +343,7 @@
 .button-group-2 {
   display: flex;
   justify-content: center;
-  margin-top: 60px;
+  margin-top: 40px;
   gap: 50px;
   align-items: center;
 }
@@ -365,6 +365,32 @@
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(90, 60, 255, 0.3);
   transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 1px solid #c3e6cb;
+  font-weight: 500;
+  font-size: 16px;
+  margin: 15px 0;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  animation: fadeInSlideDown 0.5s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeInSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .back-button {

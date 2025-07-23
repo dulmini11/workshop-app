@@ -90,10 +90,29 @@
 }
 
 .success-message {
-  color: green;
-  margin-top: 100px;
-  font-weight: bold;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  max-width: 400px;
+  margin: 100px auto 20px auto;
   text-align: center;
-  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.success-message p:first-child {
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0;
+}
+
+.success-message p:last-child {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #3c763d; /* Slightly darker green */
+  font-style: italic;
+}
+
 

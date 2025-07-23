@@ -6,7 +6,7 @@ A responsive, single-page React application that allows users to browse, registe
 
 ## 🚀 Live Demo
 
-🌐 [Visit the App](https://your-vercel-link.vercel.app)
+🌐 [Visit the App](https://workshop-app-qzum.vercel.app)
 
 👤 **Login Info**  
 - **Username**: domy  
@@ -45,58 +45,59 @@ src/
 ├── pages/               # Page-level components (Home, Dashboard, Details, Login)
 ├── App.jsx              # Root component with routing
 └── main.jsx             # Entry point
+---
 
 🎯 Objective
-Build a full-featured front-end React app (no backend) with the following capabilities:
+Build a React-based workshop platform with the following core features:
 
 Display workshop listings from local mock JSON
 
 Allow users to search, filter, and sort workshops
 
-Enable user registration/unregistration for workshops
+Enable registration/unregistration for workshops
 
-Allow logged-in users to leave and view reviews
+Logged-in users can leave and view reviews
 
-Display a personalized user dashboard showing registered workshops and user reviews
+A personalized dashboard for managing activities
+---
 
 🔐 Mock Authentication
-Authentication is simulated using mock data.
-
-Only one mock user is available for demo purposes:
+This project uses mock authentication with localStorage and hardcoded demo credentials:
 
 Username: domy
 
 Password: 1234
 
-No real signup or backend authentication is implemented in this version.
+There is no real signup or backend in this version.
+---
 
 🧑‍💻 User Dashboard
-The My Dashboard page allows logged-in users to:
+The "My Dashboard" page allows users to:
 
-View all registered workshops
+View registered workshops
 
 See their own submitted reviews
 
-Manage personal information (mocked)
+Manage (mock) user details
 
 Each review includes:
 
 Workshop title
 
-Rating (1-5 stars)
+Star rating (1–5)
 
 Feedback text
+---
 
 💾 Local Storage
-All data such as:
+All interactions and state updates are saved to localStorage, including:
+
+Logged-in user session
 
 Registered workshops
 
 Submitted reviews
-
-Logged-in user state
-
-...is stored in the browser’s localStorage for demo purposes.
+---
 
 📌 Technologies Used
 React
@@ -107,5 +108,6 @@ Vite
 
 Framer Motion
 
-Custom CSS
+CSS 
+
 

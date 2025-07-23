@@ -30,11 +30,14 @@
 
 /* Buttons */
 .logout-button {
-  background: #dc2626;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #180b61 0%, #4c48d1 100%);
   color: #ffffff;
   border: none;
   padding: 12px 20px;
-  border-radius: 8px;
+  border-radius: 20px;
   cursor: pointer;
   font-weight: 500;
   font-size: 0.9rem;
@@ -42,12 +45,13 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-top: 70px;
 }
 
 .logout-button:hover {
-  background: #b91c1c;
+  background: #1c0da7b1;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+  box-shadow: 0 4px 12px rgba(38, 47, 220, 0.175);
 }
 
 /* Main Settings Box */
@@ -287,33 +291,74 @@
 /* Dashboard Section */
 .dashboard-section {
   margin-top: 40px;
+  background-color: #5d5c5c2d;
 }
 
 .section-title {
   color: #ffffff;
-  font-size: 1.75rem;
+  font-size: 1.85rem;
   font-weight: 600;
   margin-bottom: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.workshop-title{
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.registered-workshops-row {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: #555 #222;
+}
+
+.registered-workshops-row::-webkit-scrollbar {
+  height: 8px;
+}
+
+.registered-workshops-row::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+.registered-workshops-row::-webkit-scrollbar-track {
+  background-color: #222;
+}
+
+.workshop-card-3 {
+  width: 250px;
+  flex: 0 0 auto;
+  background-color: #1e1e2f13;
+  border: 2px solid #4460df43;
+  padding: 16px;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 50px;
+}
+
+.workshop-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
 }
 
 .dashboard-container {
   display: flex;
+  flex-direction: column;
   gap: 40px;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 
+/* Make each dashboard box full width */
 .dashboard-box {
-  flex: 1;
-  min-width: 300px;
-}
-
-.reviews-box {
-  max-width: 45%;
-}
-
-.workshops-box {
-  max-width: 50%;
+  width: 100%;
 }
 
 /* Responsive Design */

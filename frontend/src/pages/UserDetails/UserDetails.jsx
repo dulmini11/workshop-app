@@ -142,11 +142,11 @@ function UserDetails({ setIsLoggedIn }) {
 
   return (
     <div className="user-details-container">
-      <div className="header-section">
-        <h1 className="section-title">Account Settings</h1>
-        <button className="logout-button" onClick={handleLogout}>
+      <button className="logout-button" onClick={handleLogout}>
           Logout
         </button>
+      <h2 className="section-title">Account Settings</h2>
+      <div className="header-section">
       </div>
 
       <div className="account-settings-box row-layout">
@@ -189,8 +189,8 @@ function UserDetails({ setIsLoggedIn }) {
         </div>
       </div>
 
+      <h2 className="section-title">My Dashboard</h2>
       <div className="dashboard-section">
-        <h2 className="section-title">My Dashboard</h2>
         <div className="dashboard-container">
         {/* Left Side - Own Reviews */}
         <div className="dashboard-box workshops-box">
@@ -198,9 +198,9 @@ function UserDetails({ setIsLoggedIn }) {
           {registeredWorkshops.length === 0 ? (
             <p className="workshop-date">You have not registered for any workshops yet.</p>
           ) : (
-            <div className="registered-workshops-grid">
+            <div className="registered-workshops-row">
               {registeredWorkshops.map((workshop) => (
-                <div key={workshop.id} className="workshop-card">
+                <div key={workshop.id} className="workshop-card-3">
                   <img
                     src={workshop.image}
                     alt={workshop.title}
@@ -220,12 +220,11 @@ function UserDetails({ setIsLoggedIn }) {
             </div>
           )}
         </div>
+        {/* Right Side - Registered Workshops */}
         <div className="dashboard-box reviews-box">
           <h2 className="workshop-title">Own Reviews</h2>
           {/* Add your own review content here, or keep it empty for now */}
         </div>
-
-        {/* Right Side - Registered Workshops */}
       </div>
       </div>
     </div>

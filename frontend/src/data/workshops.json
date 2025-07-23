@@ -40,7 +40,7 @@
       "address": "2443 Oak Ridge Omaha, QA 45065",
       "description": "This comprehensive bootcamp is designed to take beginners through the fundamentals of full-stack web development. Participants will learn essential coding languages such as HTML, CSS, and JavaScript, along with React for building dynamic user interfaces. The course emphasizes practical, hands-on experience, empowering attendees to build real-world projects. By the end, students will have the confidence and skills to create modern websites and applications, understanding the key principles behind responsive design, DOM manipulation, and frontend/backend integration. This workshop is perfect for anyone looking to jumpstart their career in web development or enhance their coding abilities in a structured, supportive environment.",
       "image": "/workS1.jpeg",
-      "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63324.22641087245!2d79.8441063!3d6.9270786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2592ec7a93d73%3A0xdaf8e1678fe7b9fc!2sGalle%20Face%20Green!5e0!3m2!1sen!2slk!4v1721442701230!5m2!1sen!2slk",
+      "map": "https://maps.google.com/maps?q=Galle%20Face%20Green,%20Colombo&z=15&output=embed",
       "reviews": [
         { "user": "AmaliP", "rating": 5, "review": "Very comprehensive and easy to follow." },
         { "user": "CodeHunter", "rating": 4, "review": "Good hands-on activities. Could have had more backend coverage." },
@@ -62,7 +62,7 @@
       "whatsapp": "007-44-7253",
       "description": "Journey beyond the stars in this exciting space science workshop tailored for curious minds of all ages. Attendees will dive deep into the mysteries of the cosmos, learning about planets, stars, galaxies, and the latest NASA missions. The workshop offers interactive presentations and hands-on activities that explore rocket science, space exploration technology, and astronomy basics. Whether you're fascinated by black holes or eager to understand the solar system, this workshop provides a captivating educational experience. Participants will leave with a greater appreciation for the universe, inspired to continue their space exploration journey and develop scientific curiosity.",
       "image": "/workS2.jpeg",
-      "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63324.22641087245!2d79.8541063!3d6.9270786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25938d1212573%3A0x4a1e3f0d43067c13!2sViharamahadevi%20Park!5e0!3m2!1sen!2slk!4v1721442741285!5m2!1sen!2slk",
+      "map": "https://maps.google.com/maps?q=Viharamahadevi%20Park,%20Colombo&z=15&output=embed",
       "reviews": [
         { "user": "AstroLover", "rating": 5, "review": "Loved the rocket demo and space visuals!" },
         { "user": "SkySeeker", "rating": 4, "review": "Informative but a bit rushed at the end." },
@@ -84,7 +84,7 @@
       "whatsapp": "007-245-1111",
       "description": "Unleash your artistic potential in this vibrant creative art and painting workshop. Designed for artists of all skill levels, participants will experiment with a variety of techniques including brushwork, color mixing, and composition. The session encourages self-expression through guided projects and open creativity, allowing each artist to develop a unique style. With supportive instruction and ample materials, attendees can explore different painting mediums, learn the basics of visual storytelling, and discover how colors influence mood and perception. This workshop fosters a welcoming environment that nurtures imagination and inspires confidence in artistic abilities, perfect for anyone eager to create and connect through art.",
       "image": "/workS3.jpeg",
-      "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63324.22641087245!2d79.8561063!3d6.9270786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25924bb46de1d%3A0x3a4e25f6450ef85e!2sIndependence%20Memorial%20Hall!5e0!3m2!1sen!2slk!4v1721442772142!5m2!1sen!2slk",
+      "map": "https://maps.google.com/maps?q=6.9270786,79.8441063&z=15&output=embed",
       "reviews": [
         { "user": "ArtSoul", "rating": 5, "review": "Peaceful and creative environment. Loved it!" },
         { "user": "CanvasKid", "rating": 4, "review": "Nice brushwork tips, but short time for final painting." },
@@ -106,7 +106,7 @@
       "whatsapp": "007-245-1113",
       "description": "Engage with nature in this interactive sustainable planting workshop, designed to promote eco-friendly gardening practices. Participants will learn about soil health, composting, native plant selection, and water conservation techniques that support environmental balance. The hands-on format encourages attendees to plant seeds, create their own small garden plots, and understand the lifecycle of plants. This workshop emphasizes the importance of sustainability in gardening, reducing waste, and encouraging biodiversity. Ideal for gardeners of all levels, the session offers valuable skills to cultivate thriving, low-impact gardens that contribute positively to the local ecosystem and foster a deeper connection with the environment.",
       "image": "/workS4.jpeg",
-      "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63324.22641087245!2d79.8591063!3d6.9270786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25923617e4b6d%3A0x60a5426f1d84c4e2!2sNational%20Museum%20Colombo!5e0!3m2!1sen!2slk!4v1721442792129!5m2!1sen!2slk",
+      "map": "https://maps.google.com/maps?q=National%20Museum%20Colombo&z=15&output=embed",
       "reviews": [
         { "user": "Greenie", "rating": 5, "review": "Hands-on and very eco-friendly. I started my own garden!" },
         { "user": "NatureFan", "rating": 4, "review": "Learned composting basics. Fun session." },
@@ -128,7 +128,7 @@
       "whatsapp": "007-555-7253",
       "description": "This workshop equips aspiring entrepreneurs and freelancers with the essential skills needed for successful self-employment. Covering business planning, marketing strategies, financial management, and client relations, participants will gain practical knowledge to start or grow their own ventures. The session emphasizes sustainability and adaptability in a competitive market, highlighting digital tools and networking opportunities. Attendees will engage in interactive activities designed to boost confidence, develop professional skills, and create actionable plans tailored to their goals. Whether launching a startup or freelancing, this workshop provides a supportive environment to learn, share ideas, and build a strong foundation for long-term career success.",
       "image": "/workS5.jpeg",
-      "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63324.22641087245!2d79.8621063!3d6.9270786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25920eae749bb%3A0x63d8d0505f223c3d!2sNelum%20Pokuna%20Mahinda%20Rajapaksa%20Theatre!5e0!3m2!1sen!2slk!4v1721442815642!5m2!1sen!2slk",
+      "map": "https://maps.google.com/maps?q=Nelum%20Pokuna%20Mahinda%20Rajapaksa%20Theatre&z=15&output=embed",
       "reviews": [
         { "user": "SoloStart", "rating": 4, "review": "Good intro to freelancing. Lacked advanced tips though." },
         { "user": "BizLearner", "rating": 5, "review": "Best session for startup newbies!" },
@@ -150,7 +150,7 @@
       "whatsapp": "007-245-888",
       "description": "Rejuvenate your body and mind in this calming yoga workshop tailored for adults of all experience levels. The session focuses on foundational yoga poses, breathing techniques, and mindfulness practices designed to improve flexibility, strength, and balance. Participants will be guided through gentle flows that enhance relaxation and reduce stress, making yoga accessible for beginners and refreshing for regular practitioners. This workshop also highlights the connection between physical movement and mental well-being, encouraging a holistic approach to health. Attendees will leave feeling refreshed, centered, and equipped with techniques to incorporate yoga into their daily routines for lasting wellness.",
       "image": "/workS6.jpeg",
-      "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63324.22641087245!2d79.8661063!3d6.9270786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25929b56a9aa1%3A0xc61cc55f4b03b8e2!2sGangaramaya%20Temple!5e0!3m2!1sen!2slk!4v1721442835373!5m2!1sen!2slk",
+      "map": "https://maps.google.com/maps?q=Nelum%20Pokuna%20Mahinda%20Rajapaksa%20Theatre&z=15&output=embed",
       "reviews": [
         { "user": "ZenVibe", "rating": 5, "review": "Felt refreshed after the session. Great for stress relief!" },
         { "user": "YogiSri", "rating": 4, "review": "Nice flows but a bit crowded." },
@@ -172,7 +172,7 @@
       "whatsapp": "007-556-7253",
       "description": "Step into the world of robotics with this beginner-friendly workshop focused on fundamental concepts and hands-on building. Perfect for kids and STEM enthusiasts, the workshop covers basic robotics principles, including sensors, actuators, and simple programming. Participants will work with kits to assemble their own robots, learning problem-solving, teamwork, and engineering design. The session encourages creativity and critical thinking while demystifying technology used in everyday life. By the end of the workshop, attendees will gain a foundational understanding of robotics systems and feel inspired to explore further STEM topics and challenges in an engaging and supportive environment.",
       "image": "/workS7.jpeg",
-      "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63324.22641087245!2d79.8701063!3d6.9270786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2591a7b20c729%3A0x81eb7aa2261a270!2sBeira%20Lake!5e0!3m2!1sen!2slk!4v1721442855359!5m2!1sen!2slk",
+      "map": "https://maps.google.com/maps?q=Gangaramaya%20Temple,%20Colombo&z=15&output=embed",
       "reviews": [
         { "user": "RoboKid", "rating": 5, "review": "Built my first robot. So cool!" },
         { "user": "TechGirl", "rating": 4, "review": "Very engaging for beginners." },
@@ -194,7 +194,7 @@
       "whatsapp": "007-666-7253",
       "description": "This workshop addresses the unique mental health challenges faced by Advanced Level (A/L) students. Attendees will learn effective stress management techniques, coping strategies for exam pressure, and ways to maintain emotional well-being during demanding academic periods. The session includes discussions on recognizing signs of burnout, seeking support, and building resilience. Facilitators provide practical tools and resources tailored to the A/L student experience, promoting a supportive environment where participants can share concerns and strategies. This workshop aims to empower students with knowledge and skills to prioritize mental health, improve focus, and enhance overall academic performance.",
       "image": "/workS8.jpeg",
-      "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63324.22641087245!2d79.8741063!3d6.9270786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2590c5822c3b9%3A0xf5f5f1a0dcba37e6!2sColombo%20Lighthouse!5e0!3m2!1sen!2slk!4v1721442875582!5m2!1sen!2slk",
+      "map": "https://maps.google.com/maps?q=Colombo%20Lighthouse&z=15&output=embed",
       "reviews": [
         { "user": "StudyStruggles", "rating": 5, "review": "Helped me handle A/L stress better!" },
         { "user": "FocusNow", "rating": 4, "review": "More group sharing time would be great." },
@@ -216,7 +216,7 @@
       "whatsapp": "007-222-7253",
       "description": "Capture stunning images and master your camera with this beginner photography workshop. Attendees will learn essential concepts such as exposure, composition, lighting, and the use of DSLR cameras. The workshop offers hands-on practice sessions where participants can experiment with different techniques and styles under expert guidance. Emphasis is placed on developing a creative eye and understanding how to tell stories through photographs. Whether you want to pursue photography as a hobby or a career, this session provides the foundational skills and confidence needed to take beautiful and impactful pictures in various settings.",
       "image": "/workS9.jpeg",
-      "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63324.22641087245!2d79.8781063!3d6.9270786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2590f3488cb59%3A0x1e8b9a4f7d47a7b4!2sColombo%20Fort%20Station!5e0!3m2!1sen!2slk!4v1721442896359!5m2!1sen!2slk",
+      "map": "https://maps.google.com/maps?q=Colombo%20Fort%20Station&z=15&output=embed",
       "reviews": [
         { "user": "ShutterBug", "rating": 5, "review": "Excellent tips for beginners with DSLR." },
         { "user": "PicPro", "rating": 4, "review": "Good practical exercises." },
@@ -238,7 +238,7 @@
       "whatsapp": "007-11-7253",
       "description": "Dive into React.js, one of the most popular JavaScript libraries for building user interfaces, in this focused workshop. Participants will learn how to create reusable components, manage state and props, and handle side effects with hooks. The session is project-based, allowing attendees to build interactive and dynamic web apps while understanding core React concepts. Additionally, the workshop covers best practices for performance optimization and debugging. This hands-on experience is ideal for frontend developers looking to enhance their skills or web enthusiasts aiming to modernize their projects with a robust framework.",
       "image": "/workS10.jpeg",
-      "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63324.22641087245!2d79.8821063!3d6.9270786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2591399a00b4b%3A0x191ecda64a2a5e09!2sPettah%20Floating%20Market!5e0!3m2!1sen!2slk!4v1721442920273!5m2!1sen!2slk",
+      "map": "https://maps.google.com/maps?q=Pettah%20Floating%20Market,%20Colombo&z=15&output=embed",
       "reviews": [
         { "user": "FrontendDev", "rating": 5, "review": "Great introduction to React with clear examples." },
         { "user": "JSBeginner", "rating": 4, "review": "Good pace but wish there were more exercises." }
@@ -259,7 +259,7 @@
       "whatsapp": "007-945-7253",
       "description": "This interactive workshop is designed to nurture creativity, curiosity, and cognitive skills in children aged 5 to 10 years. Through fun activities, games, and collaborative projects, children will develop foundational skills in problem-solving, communication, and teamwork. Facilitators encourage exploration and discovery in a supportive environment, making learning enjoyable and effective. The workshop supports early childhood development by blending educational content with engaging play, fostering a lifelong love for learning and confidence in young participants. Parents and guardians will appreciate the holistic approach to child growth offered by this session.",
       "image": "/workS11.jpeg",
-      "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63324.22641087245!2d79.8861063!3d6.9270786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2590f3488cb59%3A0xbfdcda8e38e7e438!2sDutch%20Hospital%20Shopping%20Precinct!5e0!3m2!1sen!2slk!4v1721442943879!5m2!1sen!2slk",
+      "map": "https://maps.google.com/maps?q=Dutch%20Hospital%20Shopping%20Precinct,%20Colombo&z=15&output=embed",
       "reviews": [
         { "user": "MomOf2", "rating": 5, "review": "My kids loved all the games and crafts." },
         { "user": "TeacherAnna", "rating": 4, "review": "Great for keeping kids engaged." }
@@ -280,7 +280,7 @@
       "whatsapp": "007-845-7253",
       "description": "Boost your confidence and communication skills in this engaging public speaking workshop for teenagers. Designed to provide a supportive space for learning, participants will practice speech preparation, delivery techniques, and audience engagement strategies. The workshop covers overcoming stage fright, developing clear messaging, and using body language effectively. Teens will engage in interactive exercises, group feedback sessions, and real-time presentations, fostering a positive experience that builds self-esteem. This workshop is ideal for young individuals looking to improve their public speaking abilities for school, extracurricular activities, and future career opportunities.",
       "image": "/workS12.jpeg",
-      "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63318.65542461381!2d79.8911063!3d6.9011233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25b1c8cc272c1%3A0xfca3cde4bc7eb3ee!2sDiyatha%20Uyana!5e0!3m2!1sen!2slk!4v1721442965374!5m2!1sen!2slk",
+      "map": "https://maps.google.com/maps?q=Diyatha%20Uyana,%20Colombo&z=15&output=embed",
       "reviews": [
         { "user": "TeenSpeaker", "rating": 5, "review": "Helped me speak confidently in front of crowds." },
         { "user": "ShyGuy", "rating": 4, "review": "Great tips but could be longer." }

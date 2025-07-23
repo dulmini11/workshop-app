@@ -97,24 +97,30 @@ const DetailsPage = () => {
                   <span key={index} className="tag">{tag}</span>
                 ))}
               </div>
+              <button className="register-button" onClick={handleRegisterClick}>
+                {isLoggedIn
+                  ? (isAlreadyRegistered ? 'Unregister' : 'Register Now')
+                  : 'Register Now'}
+              </button>
             </div>
             <div className="workshop-image-2">
               <img src={workshop.image} alt={workshop.title} />
             </div>
           </div>
+          <h2 className="contact-title">Contact Details</h2>
           <div className="map-and-contact">
             {/* Map iframe */}
             {workshop.map && (
-              <div className="workshop-map">
+              <div className="workshop-map" style={{ marginTop: '10px' }}>
                 <iframe
                   src={workshop.map}
                   width="100%"
                   height="300"
                   style={{ border: 0, borderRadius: '10px' }}
-                  allowFullScreen=""
+                  allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Workshop Location"
+                  title={`Location of ${workshop.title}`}
                 ></iframe>
               </div>
             )}
@@ -173,11 +179,6 @@ const DetailsPage = () => {
       </div>
 
       <div className="button-group-2">
-        <button className="register-button" onClick={handleRegisterClick}>
-          {isLoggedIn
-            ? (isAlreadyRegistered ? 'Unregister' : 'Register Now')
-            : 'Register Now'}
-        </button>
         <button className="back-button" onClick={handleBackToHome}>
           ← Back to Workshops
         </button>

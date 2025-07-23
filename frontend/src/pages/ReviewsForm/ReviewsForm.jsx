@@ -28,6 +28,7 @@ const ReviewsForm = ({ onSubmit }) => {
   };
 
   return (
+    <div className='reviewContainer'>
     <form onSubmit={handleSubmit} className="review-form">
       <h4>Submit Your Review</h4>
       <input
@@ -53,6 +54,7 @@ const ReviewsForm = ({ onSubmit }) => {
       </label>
       <button type="submit" className="submit-review-btn">Submit Review</button>
     </form>
+    </div>
   );
 };
 

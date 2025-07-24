@@ -1,44 +1,61 @@
 # 🎓 React Workshop Web App
 
-A responsive, single-page React application that allows users to browse, register, and leave feedback for various workshops — all simulated with local data. Built using modern front-end tools like Vite and React Router.
+A responsive, single-page React application that allows users to browse, register, and leave feedback for various workshops — all simulated with local data. Built using modern front-end tools like **Vite** and **React Router**.
 
 ---
-
 ## 🚀 Live Demo
 
 🌐 [Visit the App](https://workshop-app-qzum.vercel.app)
 
-👤 *Login Info*  
-- *Username*: domy  
-- *Password*: 1234  
-
+👤 **Login Info**  
+- **Username**: `domy`  
+- **Password**: `1234`
 ---
 
 ## 🧩 Features
 
 ✅ Browse workshops with search, filter, and sorting  
 ✅ View detailed info about each workshop  
-✅ Register and unregister for workshops (stored in localStorage)  
+✅ Register and unregister for workshops (stored in `localStorage`)  
 ✅ Submit feedback with rating and comment  
-✅ View your registered workshops and feedback in *My Dashboard*  
-✅ Smooth page transitions using Framer Motion  
+✅ View your registered workshops and feedback in **My Dashboard**  
+✅ Smooth page transitions using **Framer Motion**  
 ✅ Responsive UI using custom CSS and media queries
 
 ---
-##🎯 Objective
+
+## 🎯 Objective
+
 Build a React-based workshop platform with the following core features:
 
-Display workshop listings from local mock JSON
+- Display workshop listings from local mock JSON  
+- Allow users to search, filter, and sort workshops  
+- Enable registration/unregistration for workshops  
+- Logged-in users can leave and view reviews  
+- A personalized dashboard for managing activities  
 
-Allow users to search, filter, and sort workshops
-
-Enable registration/unregistration for workshops
-
-Logged-in users can leave and view reviews
-
-A personalized dashboard for managing activities
 ---
 
+## 📦 Getting Started
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/your-username/workshop-app.git
+cd workshop-app
+cd frontend
+npm install
+npm run dev
+```
+src/
+├── assets/              # Images and static assets
+├── components/          # Reusable UI components (Navbar, ReviewForm, etc.)
+├── context/             # Global state management
+├── data/                # JSON mock data for users and workshops
+├── pages/               # Page-level components (Home, Dashboard, Details, Login)
+├── App.jsx              # Root component with routing
+└── main.jsx             # Entry point
+---
 ##🔐 Mock Authentication
 This project uses mock authentication with localStorage and hardcoded demo credentials:
 
@@ -87,25 +104,3 @@ Vite
 Framer Motion
 
 CSS
-
-## 📦 Getting Started
-
-### 1️⃣ Clone the Repository
-
-```bash
-git clone https://github.com/your-username/workshop-app.git
-cd workshop-app
-cd frontend
-npm install
-npm run dev
-
-src/
-├── assets/              # Images and static assets
-├── components/          # Reusable UI components (Navbar, ReviewForm, etc.)
-├── context/             # Global state management
-├── data/                # JSON mock data for users and workshops
-├── pages/               # Page-level components (Home, Dashboard, Details, Login)
-├── App.jsx              # Root component with routing
-└── main.jsx             # Entry point
----
-

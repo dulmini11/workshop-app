@@ -14,6 +14,9 @@ const HomePage = () => {
   const [selectedTags, setSelectedTags] = useState(''); // single string for tag
   const [isSorted, setIsSorted] = useState(false);
 
+  const handleNavigate = () => {
+  navigate('/about');
+  };
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
@@ -99,7 +102,7 @@ const HomePage = () => {
           <div className="text-glow">
             <h1>
               Spark your curiosity, <br />
-              <span className="highlight">fuel your ambition</span> - <br />
+              <span className="highlight">fuel your ambition</span> <br />
               grow your skills and lead the future.
             </h1>
           </div>
@@ -118,7 +121,9 @@ const HomePage = () => {
             >
               <span>Get Started</span>
             </button>
-            <button className="btn-secondary-1"><span>Learn More</span></button>
+            <button className="btn-secondary-1" onClick={handleNavigate}>
+              <span>Learn More</span>
+            </button>
           </div>
         </div>
 

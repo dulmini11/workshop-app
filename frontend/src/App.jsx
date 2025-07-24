@@ -7,6 +7,7 @@ import Footer from './components/layout/Footer.jsx';
 import LoginRegister from './pages/LoginRegister/LoginRegister.jsx';
 import UserDetails from './pages/UserDetails/UserDetails.jsx';
 import ReviewsForm from './pages/ReviewsForm/ReviewsForm.jsx';
+import AboutPage from './pages/About/About.jsx';
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(() => {
@@ -24,6 +25,7 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
           <Route path="/workshop/:id" element={<DetailsPage />} />
 
           {/* Protected route: show UserDetails only if logged in */}

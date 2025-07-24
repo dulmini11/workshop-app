@@ -47,6 +47,8 @@ cd frontend
 npm install
 npm run dev
 ```
+---
+```bash
 src/
 ├── assets/              # Images and static assets
 ├── components/          # Reusable UI components (Navbar, ReviewForm, etc.)
@@ -55,8 +57,10 @@ src/
 ├── pages/               # Page-level components (Home, Dashboard, Details, Login)
 ├── App.jsx              # Root component with routing
 └── main.jsx             # Entry point
+```
 ---
-##🔐 Mock Authentication
+
+## 🔐 Mock Authentication 
 This project uses mock authentication with localStorage and hardcoded demo credentials:
 
 Username: domy
@@ -64,9 +68,10 @@ Username: domy
 Password: 1234
 
 There is no real signup or backend in this version.
+
 ---
 
-##🧑‍💻 User Dashboard
+## 🧑‍💻 User Dashboard
 The "My Dashboard" page allows users to:
 
 View registered workshops
@@ -82,9 +87,10 @@ Workshop title
 Star rating (1–5)
 
 Feedback text
+
 ---
 
-##💾 Local Storage
+## 💾 Local Storage
 All interactions and state updates are saved to localStorage, including:
 
 Logged-in user session
@@ -92,9 +98,10 @@ Logged-in user session
 Registered workshops
 
 Submitted reviews
+
 ---
 
-##📌 Technologies Used
+## 📌 Technologies Used
 React
 
 React Router
